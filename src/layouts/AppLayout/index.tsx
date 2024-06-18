@@ -22,9 +22,9 @@ const ColorMode = () => {
       })}
       justifyContent="center"
       alignItems="center"
-      borderRadius="32px 0 0 31px"
+      borderRadius="12px 0 0 12px"
     >
-      <IconButton onClick={toggleColorMode} sx={{ height: 60, width: 50 }}>
+      <IconButton onClick={toggleColorMode} sx={{ height: 48, width: 48 }}>
         {mode}
       </IconButton>
     </Box>
@@ -33,9 +33,14 @@ const ColorMode = () => {
 
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
-    <>
+    <Box position="relative">
       <Hidden mdDown>
-        <Box position="absolute" right={0} top={400}>
+        <Box
+          position="fixed"
+          right="0%"
+          top="50%"
+          // sx={{ transform: "translate(-50%, -50%)" }}
+        >
           <ColorMode />
         </Box>
       </Hidden>
@@ -43,7 +48,7 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
         <Header />
       </Box>
       <Box pt={8}>{children}</Box>
-    </>
+    </Box>
   );
 };
 

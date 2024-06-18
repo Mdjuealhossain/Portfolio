@@ -33,23 +33,28 @@ const Header: FC<HeaderProps> = () => {
   const logo = theme.palette.mode === "dark" ? LogoDark : LogoWhite;
   return (
     <Box>
-      <AppBar position="fixed">
-        <Container maxWidth="xl">
+      <AppBar position="fixed" elevation={0}>
+        <Container maxWidth="lg" sx={{ px: 0 }}>
           <Toolbar disableGutters>
-            <Link href="/" flex={1} pl={4}>
+            <Link href="/" flex={1}>
               <Image src={logo} alt="logo" height={32} width={32} />
             </Link>
-            <Stack
-              pr={4}
-              flexDirection="row"
-              justifyContent="space-between"
-              gap={4}
-            >
-              <Link href="/about">About</Link>
-              <Link href="/resume">Resume</Link>
-              <Link href="/portfolio">Portfolio</Link>
-              <Link href="/blog">log</Link>
-              <Link href="/contact">Contact</Link>
+            <Stack flexDirection="row" justifyContent="space-between" gap={4}>
+              <Link color="text.primary" href="/about">
+                About
+              </Link>
+              <Link color="text.primary" href="/resume">
+                Resume
+              </Link>
+              <Link color="text.primary" href="/portfolio">
+                Portfolio
+              </Link>
+              <Link color="text.primary" href="/blog">
+                Blog
+              </Link>
+              <Link color="text.primary" href="/contact">
+                Contact
+              </Link>
             </Stack>
           </Toolbar>
         </Container>
