@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { Box, Container, Grid, Stack, Typography } from "@mui/material";
-import TopTitle from "@/widgets/TopTitle";
 import BlogBanner from "@/widgets/BlogBanner";
 import BlogCards from "@/widgets/BlogCards";
 

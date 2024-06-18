@@ -1,7 +1,7 @@
 import Education from "@/widgets/Education";
 import Experience from "@/widgets/Experience";
 import MySkills from "@/widgets/MySkills";
-import TopTitle from "@/widgets/TopTitle";
+
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 const Resume = () => {

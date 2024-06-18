@@ -3,7 +3,6 @@ import { FC } from "react";
 import { Box, Button, Card, Paper, Stack, Typography } from "@mui/material";
 
 import { ResumeCardProps } from "./Types";
-import { size } from "../../app/apple-icon";
 
 const ResumeCard: FC<ResumeCardProps> = ({
   passyr,
