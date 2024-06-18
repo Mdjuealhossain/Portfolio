@@ -18,8 +18,8 @@ export default function Home() {
         height: "calc(100vh - 64px)",
       }}
     >
-      <Stack justifyContent="center" alignItems="center" height="100%">
-        <Typography variant="h1" mb={4.5}>
+      <Stack justifyContent="center" alignItems="center" height="100%" px={2}>
+        <Typography variant="h1" mb={{ xs: 2, md: 4.5 }}>
           Mohammod Jueal
         </Typography>
         <Typography variant="h4">I'm a Developer</Typography>
