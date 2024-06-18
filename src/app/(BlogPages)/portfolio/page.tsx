@@ -1,0 +1,126 @@
+"use client";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import TabPanel from "@mui/lab/TabPanel";
+import { TabContext, TabList } from "@mui/lab";
+import Image from "next/image";
+
+import jueal from "../../../../public/about.png";
+import ImageCard from "@/components/ImageCard";
+import { AllData, brandData, designData, photsData } from "@/data";
+
+const Portfolio = () => {
+  const [value, setValue] = React.useState("1");
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Stack py={{ md: 5 }}>
+      <Container maxWidth="lg">
+        <Box mb={10}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            textAlign="center"
+            pb={2}
+          >
+            Showcasing some of my best work
+          </Typography>
+          <Typography variant="h2" textAlign="center">
+            Portfolio
+          </Typography>
+        </Box>
+        <Box sx={{ width: "100%", typography: "body1" }}>
+          <TabContext value={value}>
+            <Stack justifyContent="center" alignItems="center">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                textColor="secondary"
+                indicatorColor="secondary"
+                aria-label="secondary tabs example"
+              >
+                <Tab value="1" label="All" />
+                <Tab value="2" label="Brand" />
+                <Tab value="3" label="Design" />
+                <Tab value="4" label="Photos" />
+              </Tabs>
+            </Stack>
+            <TabPanel value="1">
+              <Grid
+                container
+                spacing={3}
+                justifyContent="center"
+                alignItems="center"
+              >
+                {AllData.map((data) => {
+                  return (
+                    <Grid item xs={4} key={data.id}>
+                      <ImageCard img={data.img} title={data.title} />
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </TabPanel>
+            <TabPanel value="2">
+              <Grid
+                container
+                spacing={3}
+                justifyContent="center"
+                alignItems="center"
+              >
+                {brandData.map((data) => {
+                  return (
+                    <Grid item xs={4} key={data.id}>
+                      <ImageCard img={data.img} title={data.title} />
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </TabPanel>
+            <TabPanel value="3">
+              <Grid
+                container
+                spacing={3}
+                justifyContent="center"
+                alignItems="center"
+              >
+                {designData.map((data) => {
+                  return (
+                    <Grid item xs={4} key={data.id}>
+                      <ImageCard img={data.img} title={data.title} />
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </TabPanel>
+            <TabPanel value="4">
+              <Grid
+                container
+                spacing={3}
+                justifyContent="center"
+                alignItems="center"
+              >
+                {photsData.map((data) => {
+                  return (
+                    <Grid item xs={4} key={data.id}>
+                      <ImageCard img={data.img} title={data.title} />
+                    </Grid>
+                  );
+                })}
+              </Grid>
+            </TabPanel>
+          </TabContext>
+        </Box>
+      </Container>
+    </Stack>
+  );
+};
+
+export default Portfolio;
