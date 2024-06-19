@@ -55,7 +55,7 @@ export default {
   },
   h4: {
     ...poppins.style,
-    fontWeight: 700,
+    fontWeight: 400,
     fontSize: "1.938rem", //31px
     lineHeight: 1.6,
     letterSpacing: "0.00735em",
