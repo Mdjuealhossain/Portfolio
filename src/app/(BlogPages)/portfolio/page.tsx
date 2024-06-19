@@ -46,10 +46,10 @@ const Portfolio = () => {
                 indicatorColor="secondary"
                 aria-label="secondary tabs example"
               >
-                <Tab value="1" label="All" />
-                <Tab value="2" label="Brand" />
-                <Tab value="3" label="Design" />
-                <Tab value="4" label="Photos" />
+                <Tab value="1" label={<Typography>All</Typography>} />
+                <Tab value="2" label={<Typography>Brand</Typography>} />
+                <Tab value="3" label={<Typography>Design</Typography>} />
+                <Tab value="4" label={<Typography>Photos</Typography>} />
               </Tabs>
             </Stack>
             <TabPanel value="1">

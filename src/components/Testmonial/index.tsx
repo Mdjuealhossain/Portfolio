@@ -44,9 +44,7 @@ const Testmonial: FC<TestmonialProps> = ({
         }
       />
       <CardContent sx={{ p: 0 }}>
-        <Typography color="text.secondary" variant="caption">
-          {description}
-        </Typography>
+        <Typography color="text.secondary">{description}</Typography>
       </CardContent>
     </Card>
   );

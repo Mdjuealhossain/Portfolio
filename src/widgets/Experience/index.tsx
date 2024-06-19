@@ -8,7 +8,7 @@ import { ExperienceProps } from "./Types";
 const Experience: FC<ExperienceProps> = () => {
   return (
     <Stack gap={3}>
-      <Typography variant="h6">My Experience</Typography>
+      <Typography variant="h5">Experience</Typography>
       <ResumeCard
         passyr="2023-2024"
         depertment="Frontend Developer"
