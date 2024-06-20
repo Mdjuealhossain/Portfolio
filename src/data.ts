@@ -1,35 +1,46 @@
-import jueal from "../public/about.png";
+import b2c from "../public/static/images/pro-marketplace-ve... (1)-3.png";
+import dashboard from  "../public/static/images/dashboardwhite.png";
+import msnger from  "../public/static/images/msnger.png";
+import todo from  "../public/static/images/todo.png";
+import alphasaas from "../public/static/images/alphasaas.png";
+import alphaDashboard from  "../public/static/images/Alphadashboard.png";
+import dateRange from  "../public/static/images/dateRange.png";
 
 export const AllData = [
   {
     id: 1,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: b2c,
   },
   {
     id: 2,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: dashboard,
   },
   {
     id: 3,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphaDashboard,
   },
   {
     id: 4,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphasaas,
   },
   {
     id: 5,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: msnger,
   },
   {
     id: 6,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: todo,
+  },
+  {
+    id: 7,
+    title: "Label Tag Mokup",
+    img: dateRange,
   },
 ];
 
@@ -37,55 +48,55 @@ export const brandData = [
   {
     id: 1,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: b2c,
   },
   {
     id: 2,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphaDashboard,
   },
   {
     id: 3,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphasaas,
   },
   {
     id: 4,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: msnger,
   },
   {
     id: 5,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: dashboard,
   },
 ];
 export const designData = [
   {
     id: 1,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphaDashboard,
   },
   {
     id: 2,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: msnger,
   },
 ];
 export const photsData = [
   {
     id: 1,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphasaas,
   },
   {
     id: 2,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: alphasaas,
   },
   {
     id: 3,
     title: "Label Tag Mokup",
-    img: jueal,
+    img: b2c,
   },
 ];

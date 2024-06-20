@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography, Hidden } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function Home() {
   const [content, setContent] = useState("I'm a Developer");
@@ -46,6 +47,7 @@ export default function Home() {
       },
     },
   };
+  const theme = useTheme();
 
   return (
     <Box
@@ -61,7 +63,11 @@ export default function Home() {
         alignItems="center"
         height="100%"
         px={2}
-        bgcolor="rgba(0,0,0,.6)"
+        bgcolor={(theme) =>
+          theme.palette.mode === "dark"
+            ? "rgba(0,0,0,0.7)"
+            : "rgba(255,255,255,0.4)"
+        }
       >
         <Hidden mdDown>
           <Typography variant="h1" mb={4.5}>

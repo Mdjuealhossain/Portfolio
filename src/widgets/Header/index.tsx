@@ -63,7 +63,7 @@ const Header: FC<HeaderProps> = () => {
               <IconButton onClick={toggleColorMode}> {mode}</IconButton>
             </Hidden>
             <Hidden mdUp implementation="css">
-              <MenuBar />
+              <MenuBar  />
             </Hidden>
           </Toolbar>
         </Container>
