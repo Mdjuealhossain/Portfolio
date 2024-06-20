@@ -19,7 +19,7 @@ const Portfolio = () => {
   };
 
   return (
-    <Stack py={{ md: 5 }}>
+    <Stack py={5}>
       <Container maxWidth="lg">
         <Box mb={10}>
           <Typography
@@ -52,7 +52,7 @@ const Portfolio = () => {
                 <Tab value="4" label={<Typography>Photos</Typography>} />
               </Tabs>
             </Stack>
-            <TabPanel value="1">
+            <TabPanel value="1" sx={{ p: 0, pt: 3 }}>
               <Grid
                 container
                 spacing={3}
@@ -61,14 +61,14 @@ const Portfolio = () => {
               >
                 {AllData.map((data) => {
                   return (
-                    <Grid item xs={4} key={data.id}>
+                    <Grid item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
                 })}
               </Grid>
             </TabPanel>
-            <TabPanel value="2">
+            <TabPanel value="2" sx={{ p: 0, pt: 3 }}>
               <Grid
                 container
                 spacing={3}
@@ -77,14 +77,14 @@ const Portfolio = () => {
               >
                 {brandData.map((data) => {
                   return (
-                    <Grid item xs={4} key={data.id}>
+                    <Grid item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
                 })}
               </Grid>
             </TabPanel>
-            <TabPanel value="3">
+            <TabPanel value="3" sx={{ p: 0, pt: 3 }}>
               <Grid
                 container
                 spacing={3}
@@ -93,14 +93,14 @@ const Portfolio = () => {
               >
                 {designData.map((data) => {
                   return (
-                    <Grid item xs={4} key={data.id}>
+                    <Grid item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
                 })}
               </Grid>
             </TabPanel>
-            <TabPanel value="4">
+            <TabPanel value="4" sx={{ p: 0, pt: 3 }}>
               <Grid
                 container
                 spacing={3}
@@ -109,7 +109,7 @@ const Portfolio = () => {
               >
                 {photsData.map((data) => {
                   return (
-                    <Grid item xs={4} key={data.id}>
+                    <Grid item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );

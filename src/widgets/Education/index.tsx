@@ -8,7 +8,9 @@ import { EducationProps } from "./Types";
 const Education: FC<EducationProps> = () => {
   return (
     <Stack gap={3}>
-      <Typography variant="h5">Education</Typography>
+      <Typography variant="h5" textAlign={{ xs: "center", md: "start" }}>
+        Education
+      </Typography>
       <ResumeCard
         passyr="2016-2017"
         depertment="Secondary School Certificate at Science"

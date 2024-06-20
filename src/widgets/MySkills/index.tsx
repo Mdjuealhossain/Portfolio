@@ -27,10 +27,19 @@ const MySkills: FC<MySkillsProps> = () => {
     <Box pb={10}>
       <Grid container columnSpacing={6}>
         <Grid item xs={12}>
-          <Typography variant="body2" color="text.secondary" pb={2}>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            textAlign={{ xs: "center", md: "start" }}
+            pb={2}
+          >
             My level of knowledge in some tools
           </Typography>
-          <Typography variant="h3" pb={6}>
+          <Typography
+            variant="h3"
+            pb={6}
+            textAlign={{ xs: "center", md: "start" }}
+          >
             My Skills
           </Typography>
         </Grid>

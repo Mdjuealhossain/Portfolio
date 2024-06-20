@@ -19,8 +19,7 @@ const ImageCard: FC<ImageCardProps> = ({ img, title }) => {
 
       //   sx={{ transform: `scale(1.8)` }}
     >
-      <Image src={img} alt="all" width={370} height={395} />
-
+      <Image src={img} alt="all" layout="responsive" width={370} height={395} />
       <Stack
         position="absolute"
         bgcolor="rgba(0,0,0,0.8)"
