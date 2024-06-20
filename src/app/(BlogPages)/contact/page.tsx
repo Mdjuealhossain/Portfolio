@@ -4,7 +4,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <Box py={{ md: 5 }}>
+    <Box py={5}>
       <Container>
         <Stack alignItems="center" pb={10}>
           <Typography variant="body2" color="text.secondary" pb={2}>

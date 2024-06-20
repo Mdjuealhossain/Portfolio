@@ -18,9 +18,9 @@ import email from "../../../public/Assesr/Svg/email.svg";
 const ContactForm = () => {
   return (
     <Grid container spacing={6}>
-      <Grid item xs={7} display="flex" flexDirection="column" gap={4}>
+      <Grid item xs={12} md={7} display="flex" flexDirection="column" gap={4}>
         <Typography variant="h6">Message Me</Typography>
-        <Stack flexDirection="row" gap={4}>
+        <Stack flexDirection={{ md: "row" }} gap={4}>
           <TextField fullWidth variant="filled" placeholder="Name" />
           <TextField fullWidth variant="filled" placeholder="Email" />
         </Stack>
@@ -38,7 +38,7 @@ const ContactForm = () => {
           </Button>
         </Box>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={12} md={5}>
         <Typography mb={4} variant="h6">
           Contact Info
         </Typography>
