@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Avatar, Box, Container, Grid, Stack, Typography } from "@mui/material";
 
 import AboutDetails from "@/widgets/AboutDetails";
 import MyService from "@/widgets/MyService";
@@ -13,7 +13,7 @@ const About = () => {
   return (
     <Box py={{ md: 5 }}>
       <Container maxWidth="lg">
-        <Grid container spacing={{ xs: 4, md: 6, lg: 10 }}>
+        <Grid container spacing={{ xs: 10, md: 6, lg: 10 }}>
           <Grid
             item
             xs={12}
@@ -29,7 +29,14 @@ const About = () => {
           </Grid>
           <Grid container item xs={12}>
             <Grid item xs={12} md={6}>
-              <Image src={aboutImag} alt="about" height={517} width={430} />
+              {/* <Image src={aboutImag} alt="about" height={517} width={430} /> */}
+              <Stack justifyContent="center" alignItems="center" pb={4}>
+                <Avatar
+                  src="/public/static/images/about.png"
+                  alt="img"
+                  sx={{ width: 156, height: 156 }}
+                />
+              </Stack>
             </Grid>
             <Grid item xs={12} md={6}>
               <AboutDetails />

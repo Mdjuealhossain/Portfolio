@@ -26,11 +26,7 @@ const MyService: FC<MyServiceProps> = () => {
       >
         Services i offer to my clients
       </Typography>
-      <Typography
-        variant="h3"
-        pb={{ xs: 3, md: 6 }}
-        textAlign={{ xs: "center", md: "start" }}
-      >
+      <Typography variant="h3" pb={6} textAlign={{ xs: "center", md: "start" }}>
         My Services
       </Typography>
       <Grid container spacing={3}>

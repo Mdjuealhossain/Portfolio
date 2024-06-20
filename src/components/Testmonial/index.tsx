@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import {
   Avatar,
   Box,
@@ -19,11 +19,12 @@ const Testmonial: FC<TestmonialProps> = ({
   subtitle,
   image,
 }) => {
+  const [showMore, setShomore] = useState(false);
   return (
     <Card
       sx={(theme) => ({
-        py: 5,
-        px: 6,
+        py: { xs: 3, md: 5 },
+        px: { xs: 4, md: 6 },
         boxShadow: theme.shadows[13],
         ":hover": {
           transform: "translateY(-15px)",
@@ -44,7 +45,18 @@ const Testmonial: FC<TestmonialProps> = ({
         }
       />
       <CardContent sx={{ p: 0 }}>
-        <Typography color="text.secondary">{description}</Typography>
+        <Stack gap={3} onClick={() => setShomore(!showMore)}>
+          <Typography color="text.secondary">
+            {showMore ? description : `${description.substring(0, 209)}`}
+            <Box component="span" color="inherit">
+              {!showMore && (
+                <Typography component="span" variant="subtitle2">
+                  ...see more
+                </Typography>
+              )}
+            </Box>
+          </Typography>
+        </Stack>
       </CardContent>
     </Card>
   );

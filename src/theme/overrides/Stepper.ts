@@ -7,7 +7,10 @@ const MuiStepper: Components<Theme>["MuiStepper"] = {
 };
 const MuiMobileStepper: Components<Theme>["MuiMobileStepper"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({}),
+    root: ({ theme, ownerState }) => ({ backgroundColor: "#ffff" }),
+    dot: ({ theme, ownerState }) => ({
+      backgroundColor: "#ffff",
+    }),
   },
 };
 

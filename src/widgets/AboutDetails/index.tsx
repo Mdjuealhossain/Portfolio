@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 import {
   Stack,
@@ -17,8 +17,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { AboutDetailsProps } from "./Types";
 
 const AboutDetails: FC<AboutDetailsProps> = () => {
+  const [showMore, setShomore] = useState(false);
+
   return (
-    <Stack flexDirection="column" gap={1.25}>
+    <Stack flexDirection="column" gap={{ md: 1.25 }}>
       <Box>
         <Typography
           variant="h6"
@@ -35,15 +37,23 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
         >
           I'm Md. Jueal, a Frontend Developer
         </Typography>
-        <Typography color="text.secondary">
-          A seasoned team of designers and developers with over 3 years of
-          expertise, proficient in HTML, CSS, React, Next, Storybook, Tailwind,
-          MUI, Bootstrap, Firebase, MongoDB, and Node. We have successfully
-          transformed over 150 Figma designs into captivating websites. Our
-          passion drives our dedication to delivering outstanding results. We
-          respect your time and look forward to collaborating on something
-          extraordinary. Have a phenomenal day!
-        </Typography>
+        <Hidden mdDown>
+          <Typography color="text.secondary">{description}</Typography>
+        </Hidden>
+        <Hidden mdUp>
+          <Stack onClick={() => setShomore(!showMore)}>
+            <Typography color="text.secondary">
+              {showMore ? description : `${description.substring(0, 209)}`}
+              <Box component="span" color="inherit">
+                {!showMore && (
+                  <Typography component="span" variant="subtitle2">
+                    ...see more
+                  </Typography>
+                )}
+              </Box>
+            </Typography>
+          </Stack>
+        </Hidden>
       </Box>
       <Box py={3}>
         <Divider />
@@ -67,7 +77,7 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
         </Grid>
       </Grid>
       <Stack
-        gap={{ xs: 2, md: 3 }}
+        gap={3}
         flexDirection={{ xs: "column-reverse", md: "row" }}
         alignItems="center"
       >
@@ -92,3 +102,6 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
 };
 
 export default AboutDetails;
+
+const description =
+  "A seasoned team of designers and developers with over 3 years of expertise, proficient in HTML, CSS, React, Next, Storybook, Tailwind,MUI, Bootstrap, Firebase, MongoDB, and Node. We have successfully transformed over 150 Figma designs into captivating websites. Our passion drives our dedication to delivering outstanding results. We respect your time and look forward to collaborating on something extraordinary. Have a phenomenal day! ";

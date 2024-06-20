@@ -26,8 +26,8 @@ export default function Home() {
         setAnimate(false);
         indexText = (indexText + 1) % texts.length;
         indexImg = (indexImg + 1) % imges.length;
-      }, 500); // Match the duration of the animation
-    }, 2000); // Update every 2 seconds
+      }, 500);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

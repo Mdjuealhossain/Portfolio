@@ -16,8 +16,8 @@ const ServiceCard: FC<ServiceCardProps> = ({ title, description, logo }) => {
   return (
     <Card
       sx={(theme) => ({
-        py: 3.5,
-        px: 4.5,
+        py: { xs: 3, md: 3.5 },
+        px: { xs: 4, md: 4.5 },
         boxShadow: theme.shadows[13],
         ":hover": {
           transform: "translateY(-15px)",
