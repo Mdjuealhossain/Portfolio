@@ -13,7 +13,7 @@ export default function Home() {
   const imges = [
     "https://as2.ftcdn.net/v2/jpg/02/10/13/99/1000_F_210139964_Pl4gotUIs4RU8uzFLI7oShGLhPGg2OOH.jpg",
     "https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-abstract-3d-design-featuring-red-and-black-geometric-shapes-image_3640129.jpg",
-    "https://img.freepik.com/premium-photo/graphic-design-photographer-workspace-flat-lay-top-view-with-office-supplies-copy-space-black-background-soho-freelancer-lifestyle-concept_146508-569.jpg?w=1060",
+    "https://as1.ftcdn.net/v2/jpg/07/65/48/28/1000_F_765482818_xS6AWz4NH3spl69UoctUZDERA9EdwPoS.jpg",
   ];
 
   useEffect(() => {
