@@ -2,7 +2,7 @@ import { Theme, Components } from "@mui/material/styles";
 
 const MuiList: Components<Theme>["MuiList"] = {
   styleOverrides: {
-    root: ({ theme, ownerState }) => ({}),
+    root: ({ theme, ownerState }) => ({ paddingTop: 0, paddingBottom: 0 }),
   },
 };
 

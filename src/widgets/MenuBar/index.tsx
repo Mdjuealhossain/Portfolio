@@ -58,6 +58,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
           // backdropFilter: "blur(2px)",
           background: "transparent",
           top: -17,
+          p: 0,
           "& .MuiMenu-paper": {
             borderBottomRightRadius: 12,
             borderBottomLeftRadius: 12,
@@ -83,7 +84,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
           alignItems="center"
           borderRadius={3}
           p={2}
-          mt={10}
+          mt={8}
           mb={4}
           bgcolor="background.paper"
           mx={2}

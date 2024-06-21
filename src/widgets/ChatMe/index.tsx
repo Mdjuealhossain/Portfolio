@@ -98,10 +98,12 @@ const ChatMe = () => {
                 onClick={handleOpenNavAvatar}
                 onMouseEnter={() => setEnter((prev) => !prev)}
                 onMouseLeave={() => setEnter((prev) => !prev)}
-                size="large"
                 sx={(theme) => ({
                   background: theme.palette.success.main,
                   boxShadow: 24,
+                  border: 7,
+                  borderColor: theme.palette.grey[600],
+                  mb: 1,
                 })}
               >
                 <ChatRoundedIcon sx={{ height: 18, width: 18 }} />
@@ -139,15 +141,24 @@ const ChatMe = () => {
         }}
         open={Boolean(anchorElAvat)}
       >
-        <Stack borderRadius={3} p={1} m={1} gap={1} position="relative">
+        <Stack
+          borderRadius={3}
+          p={1}
+          mt={{ xs: 4, md: 1 }}
+          m={1}
+          gap={1}
+          position="relative"
+        >
           <Hidden mdUp>
             <IconButton
               size="small"
               sx={(theme) => ({
                 position: "absolute",
-                top: 7,
+                top: -18,
                 left: "47%",
                 bgcolor: theme.palette.success.main,
+                border: 6,
+                borderColor: theme.palette.grey[600],
                 p: 0,
               })}
             >
