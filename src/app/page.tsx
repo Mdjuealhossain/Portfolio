@@ -55,7 +55,7 @@ export default function Home() {
         backgroundImage: `url(${img})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: { xs: "calc(100vh - 48px)", md: "calc(100vh - 64px)" },
+        height: { xs: "calc(100vh - 128px)", md: "calc(100vh - 64px)" },
       }}
     >
       <Stack

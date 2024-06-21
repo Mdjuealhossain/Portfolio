@@ -139,21 +139,23 @@ const ChatMe = () => {
         open={Boolean(anchorElAvat)}
       >
         <Stack borderRadius={3} p={1} m={1} gap={1} position="relative">
-          <IconButton
-            size="small"
-            sx={(theme) => ({
-              position: "absolute",
-              top: 7,
-              left: "47%",
-              bgcolor: theme.palette.success.main,
-              p: 0,
-            })}
-          >
-            <KeyboardArrowDownRoundedIcon
-              sx={{ height: 32, width: 32 }}
-              onClick={handleCloseNavAvatar}
-            />
-          </IconButton>
+          <Hidden mdUp>
+            <IconButton
+              size="small"
+              sx={(theme) => ({
+                position: "absolute",
+                top: 7,
+                left: "47%",
+                bgcolor: theme.palette.success.main,
+                p: 0,
+              })}
+            >
+              <KeyboardArrowDownRoundedIcon
+                sx={{ height: 32, width: 32 }}
+                onClick={handleCloseNavAvatar}
+              />
+            </IconButton>
+          </Hidden>
           <Stack
             flexDirection="row"
             justifyContent="space-between"
@@ -162,11 +164,18 @@ const ChatMe = () => {
             <Typography variant="h6">
               {"Hi there!"} {"👋"}
             </Typography>
-            <Stack flexDirection="row" alignItems="center">
+            <Stack
+              flexDirection="row"
+              justifyContent="center"
+              alignItems="center"
+            >
               <MoreVertRoundedIcon />
 
               <Hidden mdDown implementation="css">
-                <KeyboardArrowDownRoundedIcon onClick={handleCloseNavAvatar} />
+                <KeyboardArrowDownRoundedIcon
+                  sx={{ height: 40, width: 40 }}
+                  onClick={handleCloseNavAvatar}
+                />
               </Hidden>
             </Stack>
           </Stack>
