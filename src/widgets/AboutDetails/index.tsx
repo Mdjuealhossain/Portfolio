@@ -34,6 +34,7 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
           variant="h4"
           pb={2}
           textAlign={{ xs: "center", md: "start" }}
+          fontWeight={700}
         >
           I'm Md. Jueal, a Frontend Developer
         </Typography>

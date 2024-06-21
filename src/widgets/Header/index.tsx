@@ -36,7 +36,7 @@ const Header: FC<HeaderProps> = () => {
     <Box>
       <AppBar position="fixed" elevation={0}>
         <Container maxWidth="lg" sx={{ md: { px: 0 } }}>
-          <Toolbar disableGutters>
+          <Toolbar disableGutters >
             <Link href="/" flex={1}>
               <Image src={logo} alt="logo" height={32} width={32} />
             </Link>

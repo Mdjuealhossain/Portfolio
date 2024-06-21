@@ -9,6 +9,33 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import { AppLayoutProps } from "./type";
 import Header from "@/widgets/Header";
 import { ColorModeContext } from "@/theme";
+import ChatMe from "@/widgets/ChatMe";
+
+const AppLayout: FC<AppLayoutProps> = ({ children }) => {
+  return (
+    <Box position="relative">
+      <Hidden mdDown>
+        <Box
+          position="fixed"
+          right="0%"
+          top="50%"
+          // sx={{ transform: "translate(-50%, -50%)" }}
+        >
+          <ColorMode />
+        </Box>
+      </Hidden>
+      <Box position="fixed" top="90%" right="12%">
+        <ChatMe />
+      </Box>
+      <Box>
+        <Header />
+      </Box>
+      <Box pt={8}>{children}</Box>
+    </Box>
+  );
+};
+
+export default AppLayout;
 
 const ColorMode = () => {
   const { toggleColorMode } = useContext(ColorModeContext);
@@ -30,26 +57,3 @@ const ColorMode = () => {
     </Box>
   );
 };
-
-const AppLayout: FC<AppLayoutProps> = ({ children }) => {
-  return (
-    <Box position="relative">
-      <Hidden mdDown>
-        <Box
-          position="fixed"
-          right="0%"
-          top="50%"
-          // sx={{ transform: "translate(-50%, -50%)" }}
-        >
-          <ColorMode />
-        </Box>
-      </Hidden>
-      <Box>
-        <Header />
-      </Box>
-      <Box pt={8}>{children}</Box>
-    </Box>
-  );
-};
-
-export default AppLayout;
