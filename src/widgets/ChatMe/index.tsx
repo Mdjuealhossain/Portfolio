@@ -54,6 +54,10 @@ const ChatMe = () => {
           alignItems="center"
           onClick={handleOpenNavAvatar}
           sx={{ cursor: "pointer" }}
+          position="fixed"
+          top={{ xs: "100%", md: "90%" }}
+          right={{ md: "12%" }}
+          zIndex={999}
         >
           <Box
             bgcolor="background.paper"
@@ -81,13 +85,13 @@ const ChatMe = () => {
       <Hidden mdUp implementation="css">
         <AppBar>
           <Toolbar
-            sx={{
+            sx={(theme) => ({
               position: "fixed",
-              bottom: 0,
+              bottom: -1,
               left: 0,
               right: 0,
-              bgcolor: "#000",
-            }}
+              bgcolor: theme.palette.background.default,
+            })}
           >
             <Stack justifyContent="center" alignItems="center" width="100%">
               <IconButton
@@ -117,7 +121,7 @@ const ChatMe = () => {
             borderTopLeftRadius: { xs: 12, md: 8 },
             borderBottomRightRadius: { xs: 0, md: 8 },
             borderBottomLeftRadius: { xs: 0, md: 8 },
-            boxShadow: 5,
+            boxShadow: 14,
             width: { xs: "100%", md: "auto" },
           },
         })}
@@ -196,7 +200,10 @@ const ChatMe = () => {
             </Typography>
           </Stack>
           <Box>
-            <Stack bgcolor="#2E2E2E" borderRadius={2}>
+            <Stack
+              bgcolor={(theme) => theme.palette.background.paper}
+              borderRadius={2}
+            >
               <Stack gap={1.5} px={1} pt={3} pb={1}>
                 <Box
                   maxWidth={230}
@@ -211,6 +218,7 @@ const ChatMe = () => {
                     fontSize={{ xs: 8, md: 10 }}
                     lineHeight="normal"
                     fontWeight={300}
+                    color="common.white"
                   >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Eius molestiae
@@ -220,13 +228,14 @@ const ChatMe = () => {
                   <Box
                     maxWidth={230}
                     width="100%"
-                    bgcolor="background.default"
+                    bgcolor={(theme) => theme.palette.grey[600]}
                     borderRadius={1}
                     px={1}
                     py={0.5}
                   >
                     <Typography
                       variant="caption"
+                      //   color="common.white"
                       fontSize={{ xs: 8, md: 10 }}
                       lineHeight="normal"
                       fontWeight={300}

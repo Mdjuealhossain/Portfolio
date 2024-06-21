@@ -1,6 +1,7 @@
 import Education from "@/widgets/Education";
 import Experience from "@/widgets/Experience";
 import MySkills from "@/widgets/MySkills";
+import Tour from "@/widgets/Tour";
 
 import { Box, Container, Grid, Typography } from "@mui/material";
 
@@ -30,6 +31,9 @@ const Resume = () => {
           </Grid>
           <Grid item xs={12}>
             <MySkills />
+          </Grid>
+          <Grid item xs={12}>
+            <Tour />
           </Grid>
         </Grid>
       </Container>

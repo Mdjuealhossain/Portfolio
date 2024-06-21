@@ -24,7 +24,11 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
           <ColorMode />
         </Box>
       </Hidden>
-      <Box position="fixed" top="90%" right="12%">
+      <Box
+      // position="fixed"
+      // top={{ xs: "100%", md: "90%" }}
+      // right={{ md: "12%" }}
+      >
         <ChatMe />
       </Box>
       <Box>

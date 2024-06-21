@@ -33,7 +33,7 @@ export default {
   },
   success: {
     dark: "#1b5e20",
-    main: "#2e7d55",
+    main: "#009e66",
     light: "#4caf50",
     contrastText: "#fff",
   },
@@ -44,7 +44,7 @@ export default {
     300: "#e0e0e0",
     400: "#dee3e4",
     500: "#9e9e9e",
-    600: "#757575",
+    600: "#F5F5F5",
     700: "#616161",
     800: "#424242",
     900: "#212121",
@@ -72,8 +72,8 @@ export default {
     activatedOpacity: 0.12,
   },
   background: {
-    default: "#fff",
-    paper: "#fff",
+    default: "#FFFFFF",
+    paper: "#f6f9fc",
   },
   common: {
     black: "#000",

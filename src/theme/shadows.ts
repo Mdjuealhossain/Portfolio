@@ -24,7 +24,7 @@ function shadowsTheme({ shadows }: PaletteOptions): ShadowsOptions {
     `0px 20px 25px -5px ${TRANSPARENT_ONE},0px 10px 10px -5px`,
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     // `0px 7px 8px -4px ${TRANSPARENT_ONE},0px 13px 19px 2px ${TRANSPARENT_TWO},0px 5px 24px 4px ${TRANSPARENT_THREE}`,
-    `${TRANSPARENT_ONE} 0px 4px 12px;`,
+    `${TRANSPARENT_ONE} 0px 0px 0px 1px;`,
     `5px 5px 15px ${TRANSPARENT_ONE},-5px 5px 15px ${TRANSPARENT_ONE},5px -5px 15px ${TRANSPARENT_ONE},-5px -5px 15px ${TRANSPARENT_ONE}`,
     `0px 8px 10px -5px ${TRANSPARENT_ONE},0px 16px 24px 2px ${TRANSPARENT_TWO},0px 6px 30px 5px ${TRANSPARENT_THREE}`,
     `0px 8px 11px -5px ${TRANSPARENT_ONE},0px 17px 26px 2px ${TRANSPARENT_TWO},0px 6px 32px 5px ${TRANSPARENT_THREE}`,
