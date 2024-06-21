@@ -70,12 +70,37 @@ export default function Home() {
         }
       >
         <Hidden mdDown>
-          <Typography variant="h1" mb={4.5}>
+          <Typography
+            variant="h1"
+            mb={4.5}
+            sx={(theme) => ({
+              backgroundcolor: "primary",
+              backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
+              backgroundSize: "100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            })}
+          >
             Mohammod Jueal
           </Typography>
         </Hidden>
         <Hidden mdUp>
-          <Typography variant="h1">Md Jueal</Typography>
+          <Typography
+            variant="h1"
+            sx={(theme) => ({
+              backgroundcolor: "primary",
+              backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
+              backgroundSize: "100%",
+              backgroundRepeat: "repeat",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            })}
+          >
+            Md. Jueal
+          </Typography>
         </Hidden>
         <Box sx={animate ? slideInRightStyles : {}}>
           <Typography variant="h4">{content}</Typography>

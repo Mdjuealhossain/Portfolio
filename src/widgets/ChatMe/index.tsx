@@ -127,6 +127,7 @@ const ChatMe = () => {
         })}
         id="menu-appbar"
         anchorEl={anchorElAvat}
+        onClose={handleCloseNavAvatar}
         anchorOrigin={{
           vertical: "top",
           horizontal: "right",
