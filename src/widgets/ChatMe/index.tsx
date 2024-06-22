@@ -125,6 +125,7 @@ const ChatMe = () => {
             borderBottomLeftRadius: { xs: 0, md: 8 },
             boxShadow: 14,
             width: { xs: "100%", md: "auto" },
+            bgcolor: theme.palette.background.paper,
           },
         })}
         id="menu-appbar"
@@ -222,7 +223,7 @@ const ChatMe = () => {
           </Stack>
           <Box>
             <Stack
-              bgcolor={(theme) => theme.palette.background.paper}
+              bgcolor={(theme) => theme.palette.background.default}
               borderRadius={2}
             >
               <Stack gap={1.5} px={1} pt={3} pb={1}>
