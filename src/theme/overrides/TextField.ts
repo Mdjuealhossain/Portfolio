@@ -16,8 +16,10 @@ const MuiFilledInput: Components<Theme>["MuiFilledInput"] = {
   styleOverrides: {
     root: ({ theme, ownerState }) => ({
       backgroundColor: theme.palette.background.paper,
-      borderTopLeftRadius: 0,
-      borderTopRightRadius: 0,
+      borderTopLeftRadius: 3,
+      borderTopRightRadius: 3,
+      borderBottomLeftRadius: 3,
+      borderBottomRightRadius: 3,
       padding: 0,
     }),
     input: ({ theme, ownerState }) => ({

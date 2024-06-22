@@ -1,4 +1,7 @@
 "use client";
+import React from "react";
+import Image from "next/image";
+
 import {
   Box,
   Button,
@@ -8,8 +11,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import Image from "next/image";
-import React from "react";
+
 import name from "../../../public/Assesr/Svg/name.svg";
 import location from "../../../public/Assesr/Svg/location.svg";
 import call from "../../../public/Assesr/Svg/call.svg";
@@ -118,44 +120,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-{
-  /* <Stack gap={3} justifyContent="center">
-            <Image src={img} alt="img"  height={36} width={29} />
-            <Image src={img} alt="img"  height={36} width={29} />
-            <Image src={img} alt="img"  height={36} width={29} />
-            <Image src={img} alt="img"  height={36} width={29} />
-          </Stack>
-          <Box>
-            <Divider
-              orientation="vertical"
-              variant="fullWidth"
-              sx={{ borderRightWidth: "2px" }}
-            />
-          </Box>
-          <Stack gap={3} justifyContent="center">
-            <Box>
-              <Typography fontWeight={600}>Name</Typography>
-              <Typography variant="caption" color="text.secondary">
-                Mohammod Jueal
-              </Typography>
-            </Box>
-            <Box>
-              <Typography fontWeight={600}>Name</Typography>
-              <Typography variant="caption" color="text.secondary">
-                Mohammod Jueal
-              </Typography>
-            </Box>
-            <Box>
-              <Typography fontWeight={600}>Name</Typography>
-              <Typography variant="caption" color="text.secondary">
-                Mohammod Jueal
-              </Typography>
-            </Box>
-            <Box>
-              <Typography fontWeight={600}>Name</Typography>
-              <Typography variant="caption" color="text.secondary">
-                Mohammod Jueal
-              </Typography>
-            </Box>
-          </Stack> */
-}
