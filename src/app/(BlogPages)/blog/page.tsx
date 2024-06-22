@@ -6,9 +6,9 @@ import BlogCards from "@/widgets/BlogCards";
 
 const Blog = () => {
   return (
-    <Box py={{ xs: 8, md: 5 }}>
+    <Box py={5}>
       <Container>
-        <Stack alignItems="center" pb={10}>
+        <Stack alignItems="center" mb={{ xs: 6, md: 10 }}>
           <Typography variant="body2" color="text.secondary" pb={2}>
             Check out my latest blog posts
           </Typography>

@@ -17,10 +17,10 @@ import email from "../../../public/Assesr/Svg/email.svg";
 
 const ContactForm = () => {
   return (
-    <Grid container spacing={6}>
-      <Grid item xs={12} md={7} display="flex" flexDirection="column" gap={4}>
+    <Grid container spacing={3}>
+      <Grid item xs={12} md={7} display="flex" flexDirection="column" gap={3}>
         <Typography variant="h6">Message Me</Typography>
-        <Stack flexDirection={{ md: "row" }} gap={4}>
+        <Stack flexDirection={{ md: "row" }} gap={3}>
           <TextField fullWidth variant="filled" placeholder="Name" />
           <TextField fullWidth variant="filled" placeholder="Email" />
         </Stack>

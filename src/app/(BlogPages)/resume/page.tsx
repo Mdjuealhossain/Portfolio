@@ -7,9 +7,9 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 
 const Resume = () => {
   return (
-    <Box py={{ xs: 8, md: 5 }}>
+    <Box py={5}>
       <Container>
-        <Grid container rowSpacing={10} columnSpacing={3}>
+        <Grid container rowSpacing={{ xs: 6, lg: 10 }} columnSpacing={3}>
           <Grid
             item
             xs={12}

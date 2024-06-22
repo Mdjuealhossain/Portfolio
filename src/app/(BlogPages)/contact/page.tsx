@@ -4,13 +4,17 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <Box py={{ xs: 8, md: 5 }}>
+    <Box py={5}>
       <Container>
-        <Stack alignItems="center" pb={10}>
+        <Stack
+          alignItems="center"
+          justifyContent="center"
+          mb={{ xs: 6, md: 10 }}
+        >
           <Typography variant="body2" color="text.secondary" pb={2}>
             Reach out to me whenever you need.
           </Typography>
-          <Typography variant="h2">Start a Conversation</Typography>
+          <Typography variant="h2">Begin a Dialogue</Typography>
         </Stack>
         <ContactForm />
       </Container>

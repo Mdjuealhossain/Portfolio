@@ -24,7 +24,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 
 const MySkills: FC<MySkillsProps> = () => {
   return (
-    <Grid container columnSpacing={6}>
+    <Grid container columnSpacing={3} rowSpacing={3}>
       <Grid item xs={12}>
         <Typography
           variant="body2"
@@ -43,119 +43,111 @@ const MySkills: FC<MySkillsProps> = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Stack gap={4}>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Web Design</Typography>
-                <Typography>95%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={95} />
-            </Stack>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Web Design</Typography>
+            <Typography>95%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>JavaScript</Typography>
-                <Typography>75%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={75} />
-            </Stack>
-          </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>HTML</Typography>
-                <Typography>95%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={95} />
-            </Stack>
-          </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>CSS</Typography>
-                <Typography>95%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={95} />
-            </Stack>
-          </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Next Js</Typography>
-                <Typography>80%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={80} />
-            </Stack>
-          </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Redux</Typography>
-                <Typography>80%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={80} />
-            </Stack>
-          </Stack>
+          <BorderLinearProgress variant="determinate" value={95} />
         </Stack>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Stack gap={4}>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>React Js</Typography>
-                <Typography>85%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={85} />
-            </Stack>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>JavaScript</Typography>
+            <Typography>75%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Boostrap</Typography>
-                <Typography>90%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={90} />
-            </Stack>
+          <BorderLinearProgress variant="determinate" value={75} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>HTML</Typography>
+            <Typography>95%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Tailwind CSS</Typography>
-                <Typography>95%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={95} />
-            </Stack>
+          <BorderLinearProgress variant="determinate" value={95} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>CSS</Typography>
+            <Typography>95%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Style Component</Typography>
-                <Typography>80%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={80} />
-            </Stack>
+          <BorderLinearProgress variant="determinate" value={95} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Next Js</Typography>
+            <Typography>80%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>Meterial UI</Typography>
-                <Typography>95%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={95} />
-            </Stack>
+          <BorderLinearProgress variant="determinate" value={80} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Redux</Typography>
+            <Typography>80%</Typography>
           </Stack>
-          <Stack>
-            <Stack gap={1}>
-              <Stack flexDirection="row" justifyContent="space-between">
-                <Typography>TypeScript</Typography>
-                <Typography>85%</Typography>
-              </Stack>
-              <BorderLinearProgress variant="determinate" value={85} />
-            </Stack>
+          <BorderLinearProgress variant="determinate" value={80} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>React Js</Typography>
+            <Typography>85%</Typography>
           </Stack>
+          <BorderLinearProgress variant="determinate" value={85} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Boostrap</Typography>
+            <Typography>90%</Typography>
+          </Stack>
+          <BorderLinearProgress variant="determinate" value={90} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Tailwind CSS</Typography>
+            <Typography>95%</Typography>
+          </Stack>
+          <BorderLinearProgress variant="determinate" value={95} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Style Component</Typography>
+            <Typography>80%</Typography>
+          </Stack>
+          <BorderLinearProgress variant="determinate" value={80} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>Meterial UI</Typography>
+            <Typography>95%</Typography>
+          </Stack>
+          <BorderLinearProgress variant="determinate" value={95} />
+        </Stack>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Stack gap={0.5}>
+          <Stack flexDirection="row" justifyContent="space-between">
+            <Typography>TypeScript</Typography>
+            <Typography>85%</Typography>
+          </Stack>
+          <BorderLinearProgress variant="determinate" value={85} />
         </Stack>
       </Grid>
     </Grid>

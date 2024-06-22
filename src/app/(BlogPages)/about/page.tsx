@@ -19,9 +19,9 @@ import aboutImag from "../../../../public/static/images/IMG_20240221_154711.jpg"
 
 const About = () => {
   return (
-    <Box py={{ xs: 8, md: 5 }}>
+    <Box py={5}>
       <Container maxWidth="lg">
-        <Grid container spacing={{ xs: 10, md: 6, lg: 10 }}>
+        <Grid container spacing={{ xs: 6, lg: 10 }}>
           <Grid
             item
             xs={12}

@@ -36,7 +36,10 @@ const Tour: FC<TourProps> = () => {
           height: "auto",
         }}
       >
-        <source src="https://youtu.be/doteMqP6eSc" type="video/mp4" />
+        <source
+          src="/public/static/video/videoplayback (1).mp4"
+          type="video/mp4"
+        />
       </Grid>
     </Grid>
   );

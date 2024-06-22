@@ -19,9 +19,9 @@ const Portfolio = () => {
   };
 
   return (
-    <Stack py={{ xs: 8, md: 5 }}>
+    <Stack py={5}>
       <Container maxWidth="lg">
-        <Box mb={10}>
+        <Box mb={{ xs: 6, md: 10 }}>
           <Typography
             variant="body2"
             color="text.secondary"
