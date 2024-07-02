@@ -1,4 +1,5 @@
-import { FC, useState, useContext } from "react";
+import { FC, useContext } from "react";
+import { usePathname } from "next/navigation";
 import {
   Box,
   Container,
@@ -32,6 +33,7 @@ const Header: FC<HeaderProps> = () => {
   const mode =
     theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
   const logo = theme.palette.mode === "dark" ? LogoDark : LogoWhite;
+  const pathname = usePathname();
   return (
     <Box>
       <AppBar position="fixed" elevation={0}>
@@ -42,19 +44,51 @@ const Header: FC<HeaderProps> = () => {
             </Link>
             <Hidden mdDown implementation="css">
               <Stack flexDirection="row" justifyContent="space-between" gap={4}>
-                <Link color="text.primary" href="/about">
+                <Link
+                  sx={{
+                    color:
+                      pathname === "/about" ? "success.main" : "text.primary",
+                  }}
+                  href="/about"
+                >
                   About
                 </Link>
-                <Link color="text.primary" href="/resume">
+                <Link
+                  sx={{
+                    color:
+                      pathname === "/resume" ? "success.main" : "text.primary",
+                  }}
+                  href="/resume"
+                >
                   Resume
                 </Link>
-                <Link color="text.primary" href="/portfolio">
+                <Link
+                  sx={{
+                    color:
+                      pathname === "/portfolio"
+                        ? "success.main"
+                        : "text.primary",
+                  }}
+                  href="/portfolio"
+                >
                   Portfolio
                 </Link>
-                <Link color="text.primary" href="/blog">
+                <Link
+                  sx={{
+                    color:
+                      pathname === "/blog" ? "success.main" : "text.primary",
+                  }}
+                  href="/blog"
+                >
                   Blog
                 </Link>
-                <Link color="text.primary" href="/contact">
+                <Link
+                  sx={{
+                    color:
+                      pathname === "/contact" ? "success.main" : "text.primary",
+                  }}
+                  href="/contact"
+                >
                   Contact
                 </Link>
               </Stack>
