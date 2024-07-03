@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Grid, Stack, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 
 import ServiceCard from "@/components/ServiceCard";
 import web from "../../../public/Assesr/Svg/web.svg";
@@ -13,11 +13,13 @@ import SEO from "../../../public/Assesr/Svg/seo.svg";
 import Progessive from "../../../public/Assesr/Svg/progessive.svg";
 import SPA from "../../../public/Assesr/Svg/spa.svg";
 
+import Objerb from "@/components/Objerb";
+
 import { MyServiceProps } from "./Types";
 
 const MyService: FC<MyServiceProps> = () => {
   return (
-    <Stack>
+    <Objerb id="services">
       <Typography
         variant="body2"
         color="text.secondary"
@@ -94,7 +96,7 @@ const MyService: FC<MyServiceProps> = () => {
           />
         </Grid>
       </Grid>
-    </Stack>
+    </Objerb>
   );
 };
 
