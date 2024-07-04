@@ -57,7 +57,7 @@ const MySkills: FC<MySkillsProps> = () => {
           <Stack gap={0.5}>
             <Stack flexDirection="row" justifyContent="space-between">
               <Typography>JavaScript</Typography>
-              <Typography>75%</Typography>
+              <Typography>80%</Typography>
             </Stack>
             <BorderLinearProgress variant="determinate" value={75} />
           </Stack>
