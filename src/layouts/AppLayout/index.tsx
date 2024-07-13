@@ -13,7 +13,7 @@ import ChatMe from "@/widgets/ChatMe";
 
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
-    <Box position="relative">
+    <Box position="relative" sx={{}}>
       <Hidden mdDown>
         <Box
           position="fixed"
@@ -43,7 +43,7 @@ const ColorMode = () => {
   return (
     <Box
       sx={(theme) => ({
-        bgcolor: theme.palette.success.light,
+        bgcolor: theme.palette.success.main,
       })}
       justifyContent="center"
       alignItems="center"

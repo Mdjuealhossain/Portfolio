@@ -1,18 +1,17 @@
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { FC, useState } from "react";
 import FormatBoldRoundedIcon from "@mui/icons-material/FormatBoldRounded";
 import FormatItalicRoundedIcon from "@mui/icons-material/FormatItalicRounded";
 import StrikethroughSRoundedIcon from "@mui/icons-material/StrikethroughSRounded";
 import FormatListBulletedRoundedIcon from "@mui/icons-material/FormatListBulletedRounded";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
-
+import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
+import EditRoundedIcon from "@mui/icons-material/EditRounded";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
+import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 import {
   Box,
   Stack,
   Typography,
-  Grid,
-  Link,
-  MenuItem,
   Menu,
   IconButton,
   Avatar,
@@ -23,14 +22,30 @@ import {
   Toolbar,
   Hidden,
 } from "@mui/material";
-import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
-import EditRoundedIcon from "@mui/icons-material/EditRounded";
-import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
-import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
 
-const ChatMe = () => {
+import { ChatMeProps } from "./Types";
+
+const ChatMe: FC<ChatMeProps> = () => {
   const [enter, setEnter] = useState(false);
   const [anchorElAvat, setAnchorElAvat] = useState<HTMLElement | null>(null);
+  const [inputData, setInputData] = useState("");
+
+  const onSubmit = () => {
+    const newId = chatData.length + 1;
+    chatData.push({
+      id: newId,
+      name: "user",
+      msg: inputData,
+    });
+  };
+
+  const handleClick = () => {
+    if (inputData.trim() !== "") {
+      onSubmit();
+      setInputData("");
+    }
+  };
+
   const handleOpenNavAvatar = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElAvat(event.currentTarget);
   };
@@ -39,9 +54,21 @@ const ChatMe = () => {
     setAnchorElAvat(null);
   };
   const icon = !enter ? (
-    <ChatRoundedIcon sx={{ height: 18, width: 18 }} />
+    <ChatRoundedIcon
+      sx={(theme) => ({
+        height: 18,
+        width: 18,
+        color: theme.palette.common.white,
+      })}
+    />
   ) : (
-    <EditRoundedIcon sx={{ height: 18, width: 18 }} />
+    <EditRoundedIcon
+      sx={(theme) => ({
+        height: 18,
+        width: 18,
+        color: theme.palette.common.white,
+      })}
+    />
   );
 
   return (
@@ -175,7 +202,7 @@ const ChatMe = () => {
             alignItems="center"
           >
             <Typography variant="h6">
-              {"Hi there!"} {"👋"}
+              {"Good to see you!"} {"👋"}
             </Typography>
             <Stack
               flexDirection="row"
@@ -183,7 +210,6 @@ const ChatMe = () => {
               alignItems="center"
             >
               <MoreVertRoundedIcon />
-
               <Hidden mdDown implementation="css">
                 <KeyboardArrowDownRoundedIcon
                   sx={{ height: 40, width: 40 }}
@@ -226,46 +252,52 @@ const ChatMe = () => {
               bgcolor={(theme) => theme.palette.background.default}
               borderRadius={2}
             >
-              <Stack gap={1.5} px={1} pt={3} pb={1}>
-                <Box
-                  maxWidth={230}
-                  width="100%"
-                  bgcolor="success.main"
-                  borderRadius={1}
-                  px={1}
-                  py={0.5}
-                >
-                  <Typography
-                    variant="caption"
-                    fontSize={{ xs: 8, md: 10 }}
-                    lineHeight="normal"
-                    fontWeight={300}
-                    color="common.white"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Eius molestiae
-                  </Typography>
-                </Box>
-                <Stack justifyContent="end" alignItems="end">
-                  <Box
-                    maxWidth={230}
-                    width="100%"
-                    bgcolor={(theme) => theme.palette.grey[600]}
-                    borderRadius={1}
-                    px={1}
-                    py={0.5}
-                  >
-                    <Typography
-                      variant="caption"
-                      //   color="common.white"
-                      fontSize={{ xs: 8, md: 10 }}
-                      lineHeight="normal"
-                      fontWeight={300}
+              <Stack
+                gap={1}
+                px={1}
+                pt={3}
+                pb={1}
+                height={130}
+                sx={(theme) => ({
+                  overflowY: "scroll",
+                  scrollBehavior: "smooth",
+                  scrollbarGutter: "end",
+                  scrollbarWidth: 2,
+                  flexDirection: `${chatData.length > 2 && "column-reverse"}`,
+                  "&::-webkit-scrollbar": {
+                    width: 5,
+                  },
+                })}
+              >
+                <Stack gap={1}>
+                  {chatData.map((data) => (
+                    <Stack
+                      key={data.id}
+                      flexDirection="column-reverse"
+                      alignItems={`${data.name === "user" ? "end" : "start"}`}
                     >
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Eius molestiae
-                    </Typography>
-                  </Box>
+                      <Box
+                        bgcolor={(theme) =>
+                          data.name === "author"
+                            ? theme.palette.grey[600]
+                            : "success.main"
+                        }
+                        borderRadius={1}
+                        px={1}
+                        py={0.5}
+                        maxWidth={232}
+                      >
+                        <Typography
+                          variant="caption"
+                          fontSize={{ xs: 8, md: 10 }}
+                          lineHeight="normal"
+                          fontWeight={300}
+                        >
+                          {data.msg}
+                        </Typography>
+                      </Box>
+                    </Stack>
+                  ))}
                 </Stack>
               </Stack>
               <Box pt={1}>
@@ -281,6 +313,18 @@ const ChatMe = () => {
                       placeholder="Type something here…"
                       aria-label="Message"
                       InputProps={{ disableUnderline: true }}
+                      value={inputData}
+                      onChange={(e) => {
+                        setInputData(e.target.value);
+                      }}
+                      onKeyDown={(event) => {
+                        if (
+                          event.key === "Enter" &&
+                          (event.metaKey || event.ctrlKey)
+                        ) {
+                          handleClick();
+                        }
+                      }}
                       sx={{
                         "& textarea:first-of-type": {
                           minHeight: 54,
@@ -326,6 +370,7 @@ const ChatMe = () => {
                       </IconButton>
                     </Box>
                     <Button
+                      type="submit"
                       size="small"
                       color="success"
                       variant="contained"
@@ -333,6 +378,7 @@ const ChatMe = () => {
                       endIcon={
                         <SendRoundedIcon sx={{ height: 18, width: 18 }} />
                       }
+                      onClick={handleClick}
                     >
                       Send
                     </Button>
@@ -348,3 +394,7 @@ const ChatMe = () => {
 };
 
 export default ChatMe;
+const chatData = [
+  { id: 1, name: "author", msg: "Welcome to my Portfolio" },
+  { id: 2, name: "author", msg: "How can i help you?" },
+];

@@ -82,7 +82,7 @@ const Header: FC<HeaderProps> = () => {
                 >
                   Blog
                 </Link>
-                <Link
+                <Link 
                   sx={{
                     color:
                       pathname === "/contact" ? "success.main" : "text.primary",

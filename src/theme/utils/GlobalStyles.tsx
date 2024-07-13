@@ -1,6 +1,8 @@
 import { GlobalStyles as MUIGlobalStyles } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 export default function GlobalStyles() {
+  const theme = useTheme();
   const inputGlobalStyles = (
     <MUIGlobalStyles
       styles={{
@@ -44,6 +46,19 @@ export default function GlobalStyles() {
         ul: {
           margin: 0,
           padding: 0,
+        },
+        "*::-webkit-scrollbar": {
+          width: "8px",
+        },
+        "*::-webkit-scrollbar-track": {
+          backgroundColor: "transparent",
+        },
+        "*::-webkit-scrollbar-thumb": {
+          backgroundColor: "transparent",
+          borderRadius: "6px",
+        },
+        "*::-webkit-scrollbar-thumb:hover": {
+          backgroundColor: theme.palette.success.main,
         },
       }}
     />
