@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography, Hidden } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
 
 export default function Home() {
   const [content, setContent] = useState("I'm a Developer");
@@ -47,7 +46,6 @@ export default function Home() {
       },
     },
   };
-  const theme = useTheme();
 
   return (
     <Box

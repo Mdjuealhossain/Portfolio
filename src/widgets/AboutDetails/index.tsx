@@ -105,4 +105,4 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
 export default AboutDetails;
 
 const description =
-  "A seasoned team of designers and developers with over 3 years of expertise, proficient in HTML, CSS, React, Next, Storybook, Tailwind,MUI, Bootstrap, Firebase, MongoDB, and Node. We have successfully transformed over 150 Figma designs into captivating websites. Our passion drives our dedication to delivering outstanding results. We respect your time and look forward to collaborating on something extraordinary. Have a phenomenal day! ";
+  "A seasoned team of designers and developers with over 2+ years of expertise, proficient in HTML, CSS, React, Next, Storybook, Tailwind,MUI, Bootstrap, Firebase, MongoDB, and Node. We have successfully transformed over 150 Figma designs into captivating websites. Our passion drives our dedication to delivering outstanding results. We respect your time and look forward to collaborating on something extraordinary. Have a phenomenal day! ";
