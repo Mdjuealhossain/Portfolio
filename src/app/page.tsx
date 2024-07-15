@@ -1,19 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Box, Stack, Typography, Hidden } from "@mui/material";
+import { Box, Stack, Typography, Hidden, CardMedia } from "@mui/material";
+import { imges } from "@/data";
 
 export default function Home() {
   const [content, setContent] = useState("I'm a Developer");
-  const [img, setImg] = useState(
-    "https://as2.ftcdn.net/v2/jpg/02/10/13/99/1000_F_210139964_Pl4gotUIs4RU8uzFLI7oShGLhPGg2OOH.jpg"
-  );
+  const [img, setImg] = useState(imges[0]);
   const [animate, setAnimate] = useState(false);
+
   const texts = ["I'm a Developer", "I'm a Designer", "I'm a Freelancer"];
-  const imges = [
-    "https://as2.ftcdn.net/v2/jpg/02/10/13/99/1000_F_210139964_Pl4gotUIs4RU8uzFLI7oShGLhPGg2OOH.jpg",
-    "https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-abstract-3d-design-featuring-red-and-black-geometric-shapes-image_3640129.jpg",
-    "https://as1.ftcdn.net/v2/jpg/07/65/48/28/1000_F_765482818_xS6AWz4NH3spl69UoctUZDERA9EdwPoS.jpg",
-  ];
 
   useEffect(() => {
     let indexText = 0;
@@ -48,9 +43,9 @@ export default function Home() {
   };
 
   return (
-    <Box
+    <CardMedia
+      image={img}
       sx={{
-        backgroundImage: `url(${img})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         height: { xs: "calc(100vh - 128px)", md: "calc(100vh - 64px)" },
@@ -104,6 +99,6 @@ export default function Home() {
           <Typography variant="h4">{content}</Typography>
         </Box>
       </Stack>
-    </Box>
+    </CardMedia>
   );
 }

@@ -1,10 +1,10 @@
 import b2c from "../public/static/images/pro-marketplace-ve... (1)-3.png";
-import dashboard from  "../public/static/images/dashboardwhite.png";
-import msnger from  "../public/static/images/msnger.png";
-import todo from  "../public/static/images/todo.png";
+import dashboard from "../public/static/images/dashboardwhite.png";
+import msnger from "../public/static/images/msnger.png";
+import todo from "../public/static/images/todo.png";
 import alphasaas from "../public/static/images/alphasaas.png";
-import alphaDashboard from  "../public/static/images/Alphadashboard.png";
-import dateRange from  "../public/static/images/dateRange.png";
+import alphaDashboard from "../public/static/images/Alphadashboard.png";
+import dateRange from "../public/static/images/dateRange.png";
 
 export const AllData = [
   {
@@ -100,3 +100,8 @@ export const photsData = [
     img: b2c,
   },
 ];
+
+const developer = "/static/images/developer.jpg";
+const designer = "/static/images/designer.jpg";
+const freelancer = "/static/images/freelancer.jpg";
+export const imges = [developer, designer, freelancer];
