@@ -21,12 +21,22 @@ const ContactForm = () => {
   return (
     <Grid
       container
-      spacing={3}
-      bgcolor="background.paper"
+      spacing={{ md: 3 }}
+      bgcolor={{ md: "background.paper" }}
       borderRadius={3}
       boxShadow={25}
     >
-      <Grid item xs={12} md={7} display="flex" flexDirection="column" gap={3}>
+      <Grid
+        bgcolor={{ xs: "background.paper" }}
+        borderRadius={3}
+        item
+        xs={12}
+        md={7}
+        display="flex"
+        flexDirection="column"
+        gap={3}
+        p={3}
+      >
         <Typography variant="h6">Message Me</Typography>
         <Stack flexDirection={{ md: "row" }} gap={3}>
           <TextField fullWidth variant="filled" placeholder="Name" />
@@ -46,7 +56,15 @@ const ContactForm = () => {
           </Button>
         </Box>
       </Grid>
-      <Grid item xs={12} md={5}>
+      <Grid
+        item
+        xs={12}
+        md={5}
+        bgcolor={{ xs: "background.paper" }}
+        borderRadius={3}
+        p={3}
+        mt={{ xs: 3, md: 0 }}
+      >
         <Typography mb={4} variant="h6">
           Contact Info
         </Typography>

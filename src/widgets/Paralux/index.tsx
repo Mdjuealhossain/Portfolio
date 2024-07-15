@@ -1,13 +1,14 @@
 "use client";
-import React from "react";
+import { FC } from "react";
 import Particles from "react-particles";
 import { loadStarsPreset } from "tsparticles-preset-stars";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import type { Engine } from "tsparticles-engine";
+import { ParaluxProps } from "./Types";
 
-export default function Paralux() {
+const Paralux: FC<ParaluxProps> = ({ particles }) => {
   const theme = useTheme();
 
   const particleOptions = {
@@ -19,7 +20,7 @@ export default function Paralux() {
     },
     particles: {
       number: {
-        value: 400,
+        value: particles,
       },
       color: {
         value: theme.palette.success.main,
@@ -48,4 +49,6 @@ export default function Paralux() {
       </Box>
     </>
   );
-}
+};
+
+export default Paralux;

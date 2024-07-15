@@ -8,9 +8,9 @@ import Paralux from "@/widgets/Paralux";
 const Contact = () => {
   return (
     <>
-      <Paralux />
+      <Paralux particles={400} />
       <Transition>
-        <Box py={5}>
+        <Box pt={5} pb={{ xs: 10, md: 5 }}>
           <Container
             sx={{
               position: "relative",
@@ -21,7 +21,6 @@ const Contact = () => {
               alignItems="center"
               justifyContent="center"
               mb={{ xs: 6, md: 10 }}
-              zIndex={999}
             >
               <Typography variant="body2" color="text.secondary" pb={2}>
                 Reach out to me whenever you need.

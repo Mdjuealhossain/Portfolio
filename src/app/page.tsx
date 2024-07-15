@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Box, Stack, Typography, Hidden, CardMedia } from "@mui/material";
 import { imges } from "@/data";
+import Paralux from "@/widgets/Paralux";
 
 export default function Home() {
   const [content, setContent] = useState("I'm a Developer");
@@ -22,7 +23,7 @@ export default function Home() {
         indexText = (indexText + 1) % texts.length;
         indexImg = (indexImg + 1) % imges.length;
       }, 500);
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -43,62 +44,65 @@ export default function Home() {
   };
 
   return (
-    <CardMedia
-      image={img}
-      sx={{
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        height: { xs: "calc(100vh - 128px)", md: "calc(100vh - 64px)" },
-      }}
-    >
-      <Stack
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-        px={2}
-        bgcolor={(theme) =>
-          theme.palette.mode === "dark"
-            ? "rgba(0,0,0,0.7)"
-            : "rgba(255,255,255,0.4)"
-        }
+    <>
+      <Paralux particles={100} />
+      <CardMedia
+        image={img}
+        sx={{
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          height: { xs: "calc(100vh - 128px)", md: "calc(100vh - 64px)" },
+        }}
       >
-        <Hidden mdDown>
-          <Typography
-            variant="h1"
-            mb={4.5}
-            sx={(theme) => ({
-              backgroundcolor: "primary",
-              backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
-              backgroundSize: "100%",
-              backgroundRepeat: "repeat",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            })}
-          >
-            Mohammod Jueal
-          </Typography>
-        </Hidden>
-        <Hidden mdUp>
-          <Typography
-            variant="h1"
-            sx={(theme) => ({
-              backgroundcolor: "primary",
-              backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
-              backgroundSize: "100%",
-              backgroundRepeat: "repeat",
-              backgroundClip: "text",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            })}
-          >
-            Md. Jueal
-          </Typography>
-        </Hidden>
-        <Box sx={animate ? slideInRightStyles : {}}>
-          <Typography variant="h4">{content}</Typography>
-        </Box>
-      </Stack>
-    </CardMedia>
+        <Stack
+          justifyContent="center"
+          alignItems="center"
+          height="100%"
+          px={2}
+          bgcolor={(theme) =>
+            theme.palette.mode === "dark"
+              ? "rgba(0,0,0,0.7)"
+              : "rgba(255,255,255,0.4)"
+          }
+        >
+          <Hidden mdDown>
+            <Typography
+              variant="h1"
+              mb={4.5}
+              sx={(theme) => ({
+                backgroundcolor: "primary",
+                backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
+                backgroundSize: "100%",
+                backgroundRepeat: "repeat",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              })}
+            >
+              Mohammod Jueal
+            </Typography>
+          </Hidden>
+          <Hidden mdUp>
+            <Typography
+              variant="h1"
+              sx={(theme) => ({
+                backgroundcolor: "primary",
+                backgroundImage: `linear-gradient(45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})`,
+                backgroundSize: "100%",
+                backgroundRepeat: "repeat",
+                backgroundClip: "text",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              })}
+            >
+              Md. Jueal
+            </Typography>
+          </Hidden>
+          <Box sx={animate ? slideInRightStyles : {}}>
+            <Typography variant="h4">{content}</Typography>
+          </Box>
+        </Stack>
+      </CardMedia>
+    </>
   );
 }
