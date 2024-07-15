@@ -19,7 +19,13 @@ import email from "../../../public/Assesr/Svg/email.svg";
 
 const ContactForm = () => {
   return (
-    <Grid container spacing={3}>
+    <Grid
+      container
+      spacing={3}
+      bgcolor="background.paper"
+      borderRadius={3}
+      boxShadow={25}
+    >
       <Grid item xs={12} md={7} display="flex" flexDirection="column" gap={3}>
         <Typography variant="h6">Message Me</Typography>
         <Stack flexDirection={{ md: "row" }} gap={3}>

@@ -20,12 +20,7 @@ const ImageCard: FC<ImageCardProps> = ({ img, title }) => {
       //   sx={{ transform: `scale(1.8)` }}
     >
       <Box height={{ xs: 168, md: 395 }}>
-        <Image
-          src={img}
-          alt="all"
-          // layout="responsive"
-          style={{ height: "100%", width: "100%" }}
-        />
+        <Image src={img} alt="all" layout="responsive" />
       </Box>
       <Stack
         position="absolute"

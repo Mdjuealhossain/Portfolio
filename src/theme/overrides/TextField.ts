@@ -15,7 +15,7 @@ const MuiInput: Components<Theme>["MuiInput"] = {
 const MuiFilledInput: Components<Theme>["MuiFilledInput"] = {
   styleOverrides: {
     root: ({ theme, ownerState }) => ({
-      backgroundColor: theme.palette.background.paper,
+      // backgroundColor: theme.palette.background.paper,
       borderTopLeftRadius: 3,
       borderTopRightRadius: 3,
       borderBottomLeftRadius: 3,
@@ -32,10 +32,6 @@ const MuiFilledInput: Components<Theme>["MuiFilledInput"] = {
       "&:after": {
         border: `1px solid ${theme.palette.success.main}`,
       },
-      // ":hover": {
-      //   backgroundColor: "transparent",
-      //   borderBottom: "2px solid transparent",
-      // },
     }),
   },
 };

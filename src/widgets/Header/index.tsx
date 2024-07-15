@@ -1,5 +1,6 @@
 import { FC, useContext } from "react";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   Box,
   Container,
@@ -8,24 +9,18 @@ import {
   Link,
   IconButton,
   Stack,
-  Typography,
   Hidden,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
-import Drawer from "@mui/material/Drawer";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "@mui/material/styles";
+import { ColorModeContext } from "@/theme";
+
+import MenuBar from "../MenuBar";
+import LogoWhite from "../../../public/img/1.png";
+import LogoDark from "../../../public/img/2.png";
 
 import { HeaderProps } from "./Types";
-import { ColorModeContext } from "@/theme";
-import Sidebar from "../MenuBar";
-import Image from "next/image";
-import LogoWhite from "../../../public/1.png";
-import LogoDark from "../../../public/2.png";
-import MenuBar from "../MenuBar";
 
 const Header: FC<HeaderProps> = () => {
   const { toggleColorMode } = useContext(ColorModeContext);
@@ -82,7 +77,7 @@ const Header: FC<HeaderProps> = () => {
                 >
                   Blog
                 </Link>
-                <Link 
+                <Link
                   sx={{
                     color:
                       pathname === "/contact" ? "success.main" : "text.primary",
