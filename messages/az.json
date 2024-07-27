@@ -2,6 +2,8 @@
   "Metatags": {
     "Landing": {
       "title": "Portfolio",
+      "name":"Məhəmməd Jueal",
+     "dev":"Mən Tərtibatçıyam","des":"Mən Dizaynerəm","free":"Mən Freelancerəm",
       "description": "O, bir neçə sadə dəyişikliklə startapların öz B2C proqramlarını yaratmaq üçün istifadə edə biləcəkləri ön, arxa plan və verilənlər bazası sxemini təqdim edir. Bu, startaplara öz inkişaflarında başlanğıc əldə etməyə və tətbiqlərini daha tez və sərfəli şəkildə işə salmağa kömək edə bilər"
     }
   }

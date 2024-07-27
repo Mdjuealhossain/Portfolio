@@ -1,5 +1,6 @@
 import { unstable_setRequestLocale } from "next-intl/server";
 import { getMessages, getTranslations } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 
 import AppLayout from "@/layouts/AppLayout";
@@ -43,7 +44,7 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params: { locale },
 }: {
@@ -52,15 +53,19 @@ export default function RootLayout({
     locale?: any;
   };
 }) {
-  unstable_setRequestLocale(locale);
-  // const messages = await getMessages();
+  // unstable_setRequestLocale(locale);
+  const messages = await getMessages();
 
-  console.log(locale);
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : ""}>
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
-          <AppLayout>{children}</AppLayout>
+          <AppLayout>
+            {" "}
+            <NextIntlClientProvider messages={messages}>
+              {children}
+            </NextIntlClientProvider>
+          </AppLayout>
         </body>
       </ThemeContextProvider>
     </html>

@@ -1,7 +1,8 @@
 "use client";
+import { FC, useState, useCallback, useMemo } from "react";
 import { useLocale } from "next-intl";
 import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
-import { FC, useState, useCallback, useMemo } from "react";
+
 import {
   Grid,
   Stack,
@@ -160,14 +161,27 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
               <TabContext value={value}>
                 <Stack>
                   <TabList onChange={handleChange}>
-                    <Tab sx={{ pl: 0 }} label="Language and region" value="1" />
-                    <Tab label="Currency" value="2" />
+                    <Tab
+                      sx={{ pl: 0 }}
+                      label={
+                        <Typography color="success.main">
+                          Language and region
+                        </Typography>
+                      }
+                      value="1"
+                    />
+                    <Tab
+                      label={
+                        <Typography color="success.main">Currency</Typography>
+                      }
+                      value="2"
+                    />
                   </TabList>
                 </Stack>
                 <TabPanel sx={{ px: 0 }} value="1">
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <Typography variant="h5">Selected languages</Typography>
+                      <Typography variant="h6">Selected languages</Typography>
                     </Grid>
                     <Grid item container spacing={2} pb={2}>
                       <Grid
@@ -190,7 +204,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                   </Grid>
                   <Grid container spacing={2}>
                     <Grid item xs={12}>
-                      <Typography variant="h5">Choose a language</Typography>
+                      <Typography variant="h6">Choose a language</Typography>
                     </Grid>
                     <Grid item container spacing={1}>
                       {languagesData?.map((lang: LanguageOptions, index) => (
@@ -220,7 +234,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                 </TabPanel>
                 <TabPanel sx={{ px: 0 }} value="2">
                   <Stack pb={4} gap={3}>
-                    <Typography variant="h5">Selected Currency</Typography>
+                    <Typography variant="h6">Selected Currency</Typography>
                     <Grid container spacing={2}>
                       <Grid
                         item
@@ -251,7 +265,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                     </Grid>
                   </Stack>
                   <Stack gap={3}>
-                    <Typography variant="h5">
+                    <Typography variant="h6">
                       Choose a language and region
                     </Typography>
                     {/* <Grid container spacing={1}>

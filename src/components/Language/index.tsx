@@ -43,19 +43,20 @@ const Language: FC<LanguageProps> = ({
               bgcolor: alpha(
                 theme.palette.primary.dark,
                 theme.palette.action.focusOpacity
-                )}
+              ),
+            },
           })}
           onClick={onClick && onClick}
         >
           <Stack flexDirection="row" alignItems="center" width="100%" gap={1}>
-            <Typography fontWeight={600} variant="h4" textTransform="uppercase">
+            <Typography fontWeight={600} variant="h5" textTransform="uppercase">
               {langKey}
             </Typography>
             <Box width={115}>
-              <Typography variant="h6" fontWeight={500}>
+              <Typography variant="subtitle1" fontWeight={500}>
                 {name?.slice(0, 10)}
               </Typography>
-              <Typography color="text.secondary" variant="body2">
+              <Typography color="text.secondary" variant="subtitle2">
                 {eng}
               </Typography>
             </Box>
