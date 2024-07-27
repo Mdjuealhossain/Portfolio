@@ -22,13 +22,11 @@ import {
   LanguageOptions,
   languages as languagesData,
 } from "@/global/staticData/index";
-// import routes from "src/global/routes";
-// import { LanguageOptions } from "src/global/types";
 import { locales } from "@/global/staticData/index";
-
-import { HeaderLanguageProps } from "./Types";
 import Language from "@/components/Language";
 import routes from "@/global/routes";
+
+import { HeaderLanguageProps } from "./Types";
 
 export const { Link, redirect, usePathname, useRouter } =
   createLocalizedPathnamesNavigation({
@@ -58,16 +56,14 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
     eng: "",
   });
 
-  // const router = useRouter();
-  // const pathName = usePathname();
-  // const locale = useLocale();
+  const router = useRouter();
+  const pathName = usePathname();
+  const locale = useLocale();
 
   const defaultLang = useMemo(() => {
-    return languagesData.filter((d) => d.key ==="" )[0];
+    return languagesData.filter((d) => d.key === locale)[0];
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(defaultLang);
 
   //---------------------------------------------------//
   // Controling Language and Currency modal open/close //
@@ -78,8 +74,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
   // replace language on modale close
   const handleCloseLangModal = useCallback(() => {
     setOpen((prev) => !prev);
-    // router.replace(pathName, { locale: language.key, scroll: false });
-    // console.log(pathName);
+    router.replace(pathName, { locale: language.key, scroll: false });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
@@ -98,8 +93,8 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
         gap={0.5}
         justifyContent="center"
         alignItems="center"
-        px={{ xs: 0, md: 3 }}
-        py={{ xs: 0, md: 1 }}
+        px={{ md: 2 }}
+        py={{ md: 0.5 }}
         ml={5}
         borderRadius={40}
         boxShadow={24}
@@ -112,7 +107,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
           },
         })}
       >
-        <TranslateIcon sx={{ height: 18, width: 18 }} />
+        <TranslateIcon sx={{ height: 14, width: 14 }} />
         <Stack width={25}>
           <Typography textTransform="uppercase">
             {language?.key || defaultLang?.key}
