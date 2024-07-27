@@ -58,7 +58,7 @@ const ChatMe: FC<ChatMeProps> = () => {
       sx={(theme) => ({
         height: 18,
         width: 18,
-        color: theme.palette.common.white,
+        color: theme.palette.text.secondary,
       })}
     />
   ) : (
@@ -178,23 +178,25 @@ const ChatMe: FC<ChatMeProps> = () => {
           position="relative"
         >
           <Hidden mdUp>
-            <IconButton
-              size="small"
-              sx={(theme) => ({
-                position: "absolute",
-                top: -18,
-                left: "47%",
-                bgcolor: theme.palette.success.main,
-                border: 6,
-                borderColor: theme.palette.grey[600],
-                p: 0,
-              })}
-            >
-              <KeyboardArrowDownRoundedIcon
-                sx={{ height: 32, width: 32 }}
-                onClick={handleCloseNavAvatar}
-              />
-            </IconButton>
+            <Box position="relative">
+              <IconButton
+                size="small"
+                sx={(theme) => ({
+                  position: "absolute",
+                  top: -40,
+                  left: "47%",
+                  bgcolor: theme.palette.success.main,
+                  border: 6,
+                  borderColor: theme.palette.grey[600],
+                  p: 0,
+                })}
+              >
+                <KeyboardArrowDownRoundedIcon
+                  sx={{ height: 32, width: 32 }}
+                  onClick={handleCloseNavAvatar}
+                />
+              </IconButton>
+            </Box>
           </Hidden>
           <Stack
             flexDirection="row"

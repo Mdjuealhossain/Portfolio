@@ -16,6 +16,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "@mui/material/styles";
 import { ColorModeContext } from "@/theme";
 
+import HeaderLanguage from "../HeaderLanguage";
 import MenuBar from "../MenuBar";
 import LogoWhite from "../../../public/img/1.png";
 import LogoDark from "../../../public/img/2.png";
@@ -94,6 +95,7 @@ const Header: FC<HeaderProps> = () => {
             <Hidden mdUp implementation="css">
               <MenuBar />
             </Hidden>
+            <HeaderLanguage />
           </Toolbar>
         </Container>
       </AppBar>
