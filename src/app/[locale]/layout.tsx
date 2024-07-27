@@ -61,7 +61,6 @@ export default async function RootLayout({
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
           <AppLayout>
-            {" "}
             <NextIntlClientProvider messages={messages}>
               {children}
             </NextIntlClientProvider>
