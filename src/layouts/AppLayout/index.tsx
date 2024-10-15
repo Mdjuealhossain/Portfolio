@@ -10,10 +10,13 @@ import { AppLayoutProps } from "./type";
 import Header from "@/widgets/Header";
 import { ColorModeContext } from "@/theme";
 import ChatMe from "@/widgets/ChatMe";
+import { CursorDot, CursorDotSingle } from "@/widgets/Cursor";
 
 const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <Box position="relative" sx={{}}>
+      <CursorDotSingle />
+      <CursorDot />
       <Hidden mdDown>
         <Box
           position="fixed"

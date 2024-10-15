@@ -18,8 +18,8 @@ import { ColorModeContext } from "@/theme";
 
 import HeaderLanguage from "../HeaderLanguage";
 import MenuBar from "../MenuBar";
-import LogoWhite from "../../../public/img/1.png";
-import LogoDark from "../../../public/img/2.png";
+// import LogoWhite from "../../../public/img/1.png";
+// import LogoDark from "../../../public/img/2.png";
 
 import { HeaderProps } from "./Types";
 
@@ -28,7 +28,7 @@ const Header: FC<HeaderProps> = () => {
   const theme = useTheme();
   const mode =
     theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
-  const logo = theme.palette.mode === "dark" ? LogoDark : LogoWhite;
+  // const logo = theme.palette.mode === "dark" ? LogoDark : LogoWhite;
   const pathname = usePathname();
   return (
     <Box>
@@ -36,7 +36,7 @@ const Header: FC<HeaderProps> = () => {
         <Container maxWidth="lg" sx={{ md: { px: 0 } }}>
           <Toolbar disableGutters>
             <Link href="/" flex={1}>
-              <Image src={logo} alt="logo" height={32} width={32} />
+              <Image src="" alt="logo" height={32} width={32} />
             </Link>
             <Hidden mdDown implementation="css">
               <Stack flexDirection="row" justifyContent="space-between" gap={4}>

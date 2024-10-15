@@ -10,8 +10,7 @@ export default async function Home({ params: { locale } }: any) {
   const dev = t("Metatags.Landing.dev");
   const des = t("Metatags.Landing.des");
   const free = t("Metatags.Landing.free");
- 
-  
+
   return (
     <>
       <Paralux particles={100} />
