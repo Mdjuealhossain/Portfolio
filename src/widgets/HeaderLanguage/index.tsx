@@ -3,49 +3,36 @@ import { FC, useState, useCallback, useMemo } from "react";
 import { useLocale } from "next-intl";
 import { createLocalizedPathnamesNavigation } from "next-intl/navigation";
 
-import {
-  Grid,
-  Stack,
-  Typography,
-  IconButton,
-  Box,
-  Modal,
-  Container,
-  Tab,
-} from "@mui/material";
+import { Grid, Stack, Typography, IconButton, Box, Modal, Container, Tab } from "@mui/material";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import CloseIcon from "@mui/icons-material/Close";
 import TranslateIcon from "@mui/icons-material/Translate";
 
-import {
-  LanguageOptions,
-  languages as languagesData,
-} from "@/global/staticData/index";
+import { LanguageOptions, languages as languagesData } from "@/global/staticData/index";
 import { locales } from "@/global/staticData/index";
 import Language from "@/components/Language";
 import routes from "@/global/routes";
 
 import { HeaderLanguageProps } from "./Types";
 
-export const { Link, redirect, usePathname, useRouter } =
-  createLocalizedPathnamesNavigation({
-    locales,
-    pathnames: {
-      "/": "/",
-      [routes.about]: {
-        en: routes.about,
-        af: routes.about,
-        am: routes.about,
-        ar: routes.about,
-        hy: routes.about,
-        as: routes.about,
-        az: routes.about,
-        bn: routes.about,
-      },
+export const { Link, redirect, usePathname, useRouter } = createLocalizedPathnamesNavigation({
+  locales,
+  pathnames: {
+    "/": "/",
+    [routes.about]: {
+      en: routes.about,
+      af: routes.about,
+      am: routes.about,
+      ar: routes.about,
+      hy: routes.about,
+      as: routes.about,
+      az: routes.about,
+      bn: routes.about,
     },
-  });
+  },
+});
 
 const HeaderLanguage: FC<HeaderLanguageProps> = () => {
   const [currency, setCurrency] = useState();
@@ -79,12 +66,9 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [language]);
 
-  const handleChange = useCallback(
-    (event: React.SyntheticEvent, newValue: string) => {
-      setValue(newValue);
-    },
-    []
-  );
+  const handleChange = useCallback((event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+  }, []);
 
   return (
     <Box mr={{ md: 2 }}>
@@ -110,9 +94,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
       >
         <TranslateIcon sx={{ height: 14, width: 14 }} />
         <Stack width={25}>
-          <Typography textTransform="uppercase">
-            {language?.key || defaultLang?.key}
-          </Typography>
+          <Typography textTransform="uppercase">{language?.key || defaultLang?.key}</Typography>
         </Stack>
       </Stack>
       <Modal open={open} onClose={handleCloseLangModal}>
@@ -161,21 +143,8 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
               <TabContext value={value}>
                 <Stack>
                   <TabList onChange={handleChange}>
-                    <Tab
-                      sx={{ pl: 0 }}
-                      label={
-                        <Typography color="success.main">
-                          Language and region
-                        </Typography>
-                      }
-                      value="1"
-                    />
-                    <Tab
-                      label={
-                        <Typography color="success.main">Currency</Typography>
-                      }
-                      value="2"
-                    />
+                    <Tab sx={{ pl: 0 }} label={<Typography color="success.main">Language and region</Typography>} value="1" />
+                    <Tab label={<Typography color="success.main">Currency</Typography>} value="2" />
                   </TabList>
                 </Stack>
                 <TabPanel sx={{ px: 0 }} value="1">
@@ -184,21 +153,8 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                       <Typography variant="h6">Selected languages</Typography>
                     </Grid>
                     <Grid item container spacing={2} pb={2}>
-                      <Grid
-                        item
-                        xs={6}
-                        md={3}
-                        display="flex"
-                        flexDirection="row"
-                        alignItems="center"
-                        gap={1.25}
-                      >
-                        <Language
-                          name={language?.name || defaultLang?.name}
-                          langKey={language?.key || defaultLang?.key}
-                          eng={language?.eng || defaultLang?.eng}
-                          isActive
-                        />
+                      <Grid item xs={6} md={3} display="flex" flexDirection="row" alignItems="center" gap={1.25}>
+                        <Language name={language?.name || defaultLang?.name} langKey={language?.key || defaultLang?.key} eng={language?.eng || defaultLang?.eng} isActive />
                       </Grid>
                     </Grid>
                   </Grid>
@@ -208,25 +164,8 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                     </Grid>
                     <Grid item container spacing={1}>
                       {languagesData?.map((lang: LanguageOptions, index) => (
-                        <Grid
-                          item
-                          xs={6}
-                          md={3}
-                          key={index}
-                          display="flex"
-                          flexDirection="row"
-                          alignItems="center"
-                          gap={1.25}
-                        >
-                          <Language
-                            name={lang.name}
-                            langKey={lang.key}
-                            eng={lang.eng}
-                            isActive={Boolean(
-                              (language?.key || defaultLang?.key) === lang.key
-                            )}
-                            onClick={() => setLanguage(lang)}
-                          />
+                        <Grid item xs={6} md={3} key={index} display="flex" flexDirection="row" alignItems="center" gap={1.25}>
+                          <Language name={lang.name} langKey={lang.key} eng={lang.eng} isActive={Boolean((language?.key || defaultLang?.key) === lang.key)} onClick={() => setLanguage(lang)} />
                         </Grid>
                       ))}
                     </Grid>
@@ -236,15 +175,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                   <Stack pb={4} gap={3}>
                     <Typography variant="h6">Selected Currency</Typography>
                     <Grid container spacing={2}>
-                      <Grid
-                        item
-                        xs={6}
-                        md={3}
-                        display="flex"
-                        flexDirection="row"
-                        alignItems="center"
-                        gap={1.25}
-                      >
+                      <Grid item xs={6} md={3} display="flex" flexDirection="row" alignItems="center" gap={1.25}>
                         {/* <CounttryLanRegion
                           currencie={
                             Object.values(currency?.currencies)[0]?.name
@@ -265,9 +196,7 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
                     </Grid>
                   </Stack>
                   <Stack gap={3}>
-                    <Typography variant="h6">
-                      Choose a language and region
-                    </Typography>
+                    <Typography variant="h6">Choose a language and region</Typography>
                     {/* <Grid container spacing={1}>
                       {countris.map((country: any, index) => {
                         if (country?.currencies) {

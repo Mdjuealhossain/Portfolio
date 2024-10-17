@@ -1,14 +1,6 @@
 import { FC, useState } from "react";
 
-import {
-  Stack,
-  Typography,
-  Box,
-  Divider,
-  Grid,
-  Button,
-  Hidden,
-} from "@mui/material";
+import { Stack, Typography, Box, Divider, Grid, Button, Hidden } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
@@ -22,20 +14,10 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
   return (
     <Stack flexDirection="column" gap={{ md: 1.25 }}>
       <Box>
-        <Typography
-          variant="h6"
-          color="success.main"
-          textAlign={{ xs: "center", md: "start" }}
-          pb={2}
-        >
+        <Typography variant="h6" color="success.main" textAlign={{ xs: "center", md: "start" }} pb={2}>
           Who am i?
         </Typography>
-        <Typography
-          variant="h4"
-          pb={2}
-          textAlign={{ xs: "center", md: "start" }}
-          fontWeight={700}
-        >
+        <Typography variant="h4" pb={2} textAlign={{ xs: "center", md: "start" }} fontWeight={700}>
           I'm Md. Jueal, a Frontend Developer
         </Typography>
         <Hidden mdDown>
@@ -77,11 +59,7 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
           <Typography color="text.secondary">Dhaka, Bangladesh</Typography>
         </Grid>
       </Grid>
-      <Stack
-        gap={3}
-        flexDirection={{ xs: "column-reverse", md: "row" }}
-        alignItems="center"
-      >
+      <Stack gap={3} flexDirection={{ xs: "column-reverse", md: "row" }} alignItems="center">
         <Button variant="contained" color="success" sx={{ borderRadius: 30 }}>
           Download CV
         </Button>

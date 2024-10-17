@@ -3,9 +3,7 @@ import { FC } from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import { Grid, Stack, Typography } from "@mui/material";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
+import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
 
 import { MySkillsProps } from "./Types";
 import Objerb from "@/components/Objerb";
@@ -14,8 +12,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,
   borderRadius: 5,
   [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor:
-      theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+    backgroundColor: theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
   },
   [`& .${linearProgressClasses.bar}`]: {
     borderRadius: 5,
@@ -28,19 +25,10 @@ const MySkills: FC<MySkillsProps> = () => {
     <Objerb id="my-skilled">
       <Grid container columnSpacing={3} rowSpacing={3}>
         <Grid item xs={12}>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            textAlign={{ xs: "center", md: "start" }}
-            pb={2}
-          >
+          <Typography variant="body2" color="text.secondary" textAlign={{ xs: "center", md: "start" }} pb={2}>
             My level of knowledge in some tools
           </Typography>
-          <Typography
-            variant="h3"
-            pb={6}
-            textAlign={{ xs: "center", md: "start" }}
-          >
+          <Typography variant="h3" pb={6} textAlign={{ xs: "center", md: "start" }}>
             My Skills
           </Typography>
         </Grid>

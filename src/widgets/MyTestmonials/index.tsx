@@ -17,8 +17,7 @@ import { MyTestmonialsProps } from "./Types";
 const images = [
   {
     title: "Mohammad A.",
-    image:
-      "https://cdn5.f-cdn.com/ppic/57478450/logo/7396874/profile_logo_7396874.jpg?image-optimizer=force&format=webply&width=120",
+    image: "https://cdn5.f-cdn.com/ppic/57478450/logo/7396874/profile_logo_7396874.jpg?image-optimizer=force&format=webply&width=120",
     description:
       "Mohammod Jueal is an exceptionally skilled front-end developer with expertise in HTML, CSS, JavaScript, and modern frameworks. Their meticulous attention to detail, innovative problem-solving, and strong collaboration make them a valuable asset to any team. Reliable and consistently delivering high-quality work on time, Jueal is committed to continuous learning and innovation. Highly recommended!",
     subtitle: "Project Maneger",
@@ -35,8 +34,7 @@ const images = [
 const steps = [
   {
     title: "Mohammad A.",
-    image:
-      "https://cdn5.f-cdn.com/ppic/57478450/logo/7396874/profile_logo_7396874.jpg?image-optimizer=force&format=webply&width=120",
+    image: "https://cdn5.f-cdn.com/ppic/57478450/logo/7396874/profile_logo_7396874.jpg?image-optimizer=force&format=webply&width=120",
     description:
       "Mohammod Jueal is an exceptionally skilled front-end developer with expertise in HTML, CSS, JavaScript, and modern frameworks. Their meticulous attention to detail, innovative problem-solving, and strong collaboration make them a valuable asset to any team. Reliable and consistently delivering high-quality work on time, Jueal is committed to continuous learning and innovation. Highly recommended!",
     subtitle: "Project Maneger",
@@ -65,12 +63,7 @@ const MyTestmonials: FC<MyTestmonialsProps> = () => {
   };
   return (
     <Objerb id="testimonials">
-      <Typography
-        variant="body2"
-        color="text.secondary"
-        pb={2}
-        textAlign={{ xs: "center", md: "start" }}
-      >
+      <Typography variant="body2" color="text.secondary" pb={2} textAlign={{ xs: "center", md: "start" }}>
         What my clients think about me
       </Typography>
       <Typography variant="h3" pb={6} textAlign={{ xs: "center", md: "start" }}>
@@ -78,12 +71,7 @@ const MyTestmonials: FC<MyTestmonialsProps> = () => {
       </Typography>
       <Hidden mdUp implementation="css">
         <Box sx={{ maxWidth: 400, flexGrow: 1 }}>
-          <Testmonial
-            title={steps[activeStep].title}
-            image={steps[activeStep].image}
-            description={steps[activeStep].description}
-            subtitle={steps[activeStep].subtitle}
-          />
+          <Testmonial title={steps[activeStep].title} image={steps[activeStep].image} description={steps[activeStep].description} subtitle={steps[activeStep].subtitle} />
 
           <MobileStepper
             steps={maxSteps}
@@ -95,32 +83,14 @@ const MyTestmonials: FC<MyTestmonialsProps> = () => {
               },
             })}
             nextButton={
-              <Button
-                size="small"
-                color="success"
-                onClick={handleNext}
-                disabled={activeStep === maxSteps - 1}
-              >
+              <Button size="small" color="success" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
                 Next
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowLeft />
-                ) : (
-                  <KeyboardArrowRight />
-                )}
+                {theme.direction === "rtl" ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
               </Button>
             }
             backButton={
-              <Button
-                size="small"
-                color="success"
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                {theme.direction === "rtl" ? (
-                  <KeyboardArrowRight />
-                ) : (
-                  <KeyboardArrowLeft />
-                )}
+              <Button size="small" color="success" onClick={handleBack} disabled={activeStep === 0}>
+                {theme.direction === "rtl" ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
                 Back
               </Button>
             }

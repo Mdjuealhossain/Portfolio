@@ -17,11 +17,7 @@ const Contact = () => {
               zIndex: 1,
             }}
           >
-            <Stack
-              alignItems="center"
-              justifyContent="center"
-              mb={{ xs: 6, md: 10 }}
-            >
+            <Stack alignItems="center" justifyContent="center" mb={{ xs: 6, md: 10 }}>
               <Typography variant="body2" color="text.secondary" pb={2}>
                 Reach out to me whenever you need.
               </Typography>

@@ -1,16 +1,7 @@
 import { FC, useContext } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import {
-  Box,
-  Container,
-  AppBar,
-  Toolbar,
-  Link,
-  IconButton,
-  Stack,
-  Hidden,
-} from "@mui/material";
+import { Box, Container, AppBar, Toolbar, Link, IconButton, Stack, Hidden } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "@mui/material/styles";
@@ -26,8 +17,7 @@ import { HeaderProps } from "./Types";
 const Header: FC<HeaderProps> = () => {
   const { toggleColorMode } = useContext(ColorModeContext);
   const theme = useTheme();
-  const mode =
-    theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
+  const mode = theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
   // const logo = theme.palette.mode === "dark" ? LogoDark : LogoWhite;
   const pathname = usePathname();
   return (
@@ -42,8 +32,7 @@ const Header: FC<HeaderProps> = () => {
               <Stack flexDirection="row" justifyContent="space-between" gap={4}>
                 <Link
                   sx={{
-                    color:
-                      pathname === "/about" ? "success.main" : "text.primary",
+                    color: pathname === "/about" ? "success.main" : "text.primary",
                   }}
                   href="/about"
                 >
@@ -51,8 +40,7 @@ const Header: FC<HeaderProps> = () => {
                 </Link>
                 <Link
                   sx={{
-                    color:
-                      pathname === "/resume" ? "success.main" : "text.primary",
+                    color: pathname === "/resume" ? "success.main" : "text.primary",
                   }}
                   href="/resume"
                 >
@@ -60,10 +48,7 @@ const Header: FC<HeaderProps> = () => {
                 </Link>
                 <Link
                   sx={{
-                    color:
-                      pathname === "/portfolio"
-                        ? "success.main"
-                        : "text.primary",
+                    color: pathname === "/portfolio" ? "success.main" : "text.primary",
                   }}
                   href="/portfolio"
                 >
@@ -71,8 +56,7 @@ const Header: FC<HeaderProps> = () => {
                 </Link>
                 <Link
                   sx={{
-                    color:
-                      pathname === "/blog" ? "success.main" : "text.primary",
+                    color: pathname === "/blog" ? "success.main" : "text.primary",
                   }}
                   href="/blog"
                 >
@@ -80,8 +64,7 @@ const Header: FC<HeaderProps> = () => {
                 </Link>
                 <Link
                   sx={{
-                    color:
-                      pathname === "/contact" ? "success.main" : "text.primary",
+                    color: pathname === "/contact" ? "success.main" : "text.primary",
                   }}
                   href="/contact"
                 >

@@ -1,16 +1,7 @@
 import { FC, useState } from "react";
 import Image from "next/image";
 
-import {
-  Box,
-  Stack,
-  Typography,
-  Grid,
-  Link,
-  MenuItem,
-  Menu,
-  IconButton,
-} from "@mui/material";
+import { Box, Stack, Typography, Grid, Link, MenuItem, Menu, IconButton } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
 import Drawer from "@mui/material/Drawer";
@@ -44,10 +35,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
         <MenuIcon
           sx={(theme) => ({
             ml: 2,
-            color:
-              theme.palette.mode === "dark"
-                ? theme.palette.common.white
-                : theme.palette.common.black,
+            color: theme.palette.mode === "dark" ? theme.palette.common.white : theme.palette.common.black,
           })}
         />
       </IconButton>
@@ -79,33 +67,10 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
         open={Boolean(anchorElAvat)}
         onClose={handleCloseNavAvatar}
       >
-        <Stack
-          justifyContent="center"
-          alignItems="center"
-          borderRadius={3}
-          p={2}
-          mt={8}
-          mb={4}
-          bgcolor="background.paper"
-          mx={2}
-        >
-          <Grid
-            container
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-          >
+        <Stack justifyContent="center" alignItems="center" borderRadius={3} p={2} mt={8} mb={4} bgcolor="background.paper" mx={2}>
+          <Grid container display="flex" justifyContent="center" alignItems="center">
             <Grid item xs={4}>
-              <MenuItem
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                gap={0.5}
-                component={Link}
-                onClick={handleCloseNavAvatar}
-                href="/about"
-              >
+              <MenuItem display="flex" justifyContent="center" alignItems="center" flexDirection="column" gap={0.5} component={Link} onClick={handleCloseNavAvatar} href="/about">
                 <Image src={about} alt="resume" height={32} width={32} />
                 <Typography color="text.primary" variant="caption">
                   About
@@ -114,16 +79,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
             </Grid>
 
             <Grid item xs={4}>
-              <MenuItem
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                gap={0.5}
-                component={Link}
-                onClick={handleCloseNavAvatar}
-                href="/resume"
-              >
+              <MenuItem display="flex" justifyContent="center" alignItems="center" flexDirection="column" gap={0.5} component={Link} onClick={handleCloseNavAvatar} href="/resume">
                 <Image src={resume} alt="resume" height={32} width={32} />
                 <Typography color="text.primary" variant="caption">
                   Resume
@@ -131,16 +87,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
               </MenuItem>
             </Grid>
             <Grid item xs={4}>
-              <MenuItem
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                gap={0.5}
-                component={Link}
-                onClick={handleCloseNavAvatar}
-                href="/portfolio"
-              >
+              <MenuItem display="flex" justifyContent="center" alignItems="center" flexDirection="column" gap={0.5} component={Link} onClick={handleCloseNavAvatar} href="/portfolio">
                 <Image src={portfolio} alt="resume" height={32} width={32} />
                 <Typography color="text.primary" variant="caption">
                   Portfolio
@@ -148,16 +95,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
               </MenuItem>
             </Grid>
             <Grid item xs={4}>
-              <MenuItem
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                gap={0.5}
-                component={Link}
-                onClick={handleCloseNavAvatar}
-                href="/blog"
-              >
+              <MenuItem display="flex" justifyContent="center" alignItems="center" flexDirection="column" gap={0.5} component={Link} onClick={handleCloseNavAvatar} href="/blog">
                 <Image src={blog} alt="resume" height={32} width={32} />
                 <Typography color="text.primary" variant="caption">
                   Blog
@@ -165,16 +103,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
               </MenuItem>
             </Grid>
             <Grid item xs={4}>
-              <MenuItem
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                flexDirection="column"
-                gap={0.5}
-                component={Link}
-                onClick={handleCloseNavAvatar}
-                href="/contact"
-              >
+              <MenuItem display="flex" justifyContent="center" alignItems="center" flexDirection="column" gap={0.5} component={Link} onClick={handleCloseNavAvatar} href="/contact">
                 <Image src={contact} alt="resume" height={32} width={32} />
                 <Typography color="text.primary" variant="caption">
                   Contact
@@ -240,12 +169,7 @@ const MenuBar: FC<MenuBarProps> = ({ onClose }) => {
           justifyContent="space-around
           "
         >
-          <Link
-            onClick={handleCloseNavAvatar}
-            color="text.primary"
-            variant="caption"
-            href="/"
-          >
+          <Link onClick={handleCloseNavAvatar} color="text.primary" variant="caption" href="/">
             Go Home
           </Link>
           <IconButton

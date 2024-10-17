@@ -7,11 +7,7 @@ const variants = {
   enter: { opacity: 1, x: 0, y: 0 },
 };
 
-export default function Transition({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Transition({ children }: { children: React.ReactNode }) {
   const variants = {
     hidden: { opacity: 0, scale: 0.9 },
     visible: {
@@ -25,12 +21,7 @@ export default function Transition({
   };
 
   return (
-    <motion.main
-      initial="hidden"
-      animate="visible"
-      variants={variants}
-      exit={{ opacity: 0, scale: 0.9 }}
-    >
+    <motion.main initial="hidden" animate="visible" variants={variants} exit={{ opacity: 0, scale: 0.9 }}>
       {children}
     </motion.main>
   );

@@ -54,17 +54,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
         height: { xs: "calc(100vh - 128px)", md: "calc(100vh - 64px)" },
       }}
     >
-      <Stack
-        justifyContent="center"
-        alignItems="center"
-        height="100%"
-        px={2}
-        bgcolor={(theme) =>
-          theme.palette.mode === "dark"
-            ? "rgba(0,0,0,0.7)"
-            : "rgba(255,255,255,0.4)"
-        }
-      >
+      <Stack justifyContent="center" alignItems="center" height="100%" px={2} bgcolor={(theme) => (theme.palette.mode === "dark" ? "rgba(0,0,0,0.7)" : "rgba(255,255,255,0.4)")}>
         <Hidden mdDown>
           <Typography
             variant="h1"

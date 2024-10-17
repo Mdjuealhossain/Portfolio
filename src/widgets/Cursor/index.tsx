@@ -46,76 +46,6 @@ export const CursorDotSingle: React.FC = () => {
   );
 };
 
-// export const CursorDotSingle = () => {
-//   const [dots, setDots] = useState([]);
-
-//   const handleClick = (e) => {
-//     const newDots = [];
-//     const numDots = 6; // Number of dots to generate
-
-//     // Generate dots at the click position
-//     for (let i = 0; i < numDots; i++) {
-//       const angle = (Math.PI * 2 * i) / numDots; // Spread dots evenly in a circular burst
-//       const velocity = 100 + Math.random() * 50; // Random velocity
-//       const lifetime = 500 + Math.random() * 500; // Random lifetime for each dot
-
-//       newDots.push({
-//         id: Math.random(),
-//         x: e.clientX,
-//         y: e.clientY,
-//         angle,
-//         velocity,
-//         lifetime,
-//         startTime: Date.now(),
-//       });
-//     }
-
-//     setDots((prevDots) => [...prevDots, ...newDots]);
-//   };
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setDots((prevDots) =>
-//         prevDots.filter((dot) => Date.now() - dot.startTime < dot.lifetime)
-//       );
-//     }, 16); // 60 FPS update
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div
-//       style={{ height: "100vh", width: "100vw", position: "relative" }}
-//       onClick={handleClick}
-//     >
-//       {dots.map((dot) => {
-//         const elapsedTime = Date.now() - dot.startTime;
-//         const progress = elapsedTime / dot.lifetime;
-//         const moveX = Math.cos(dot.angle) * dot.velocity * progress;
-//         const moveY = Math.sin(dot.angle) * dot.velocity * progress;
-
-//         return (
-//           <div
-//             key={dot.id}
-//             style={{
-//               position: "fixed",
-//               left: dot.x + moveX,
-//               top: dot.y + moveY,
-//               width: "10px",
-//               height: "10px",
-//               backgroundColor:"#009e66",
-//               borderRadius: "50%",
-//               pointerEvents: "none",
-//               transform: "translate(-50%, -50%)",
-//               opacity: 1 - progress, // Fade out over time
-//             }}
-//           />
-//         );
-//       })}
-//     </div>
-//   );
-// };
-
 interface Dot {
   id: number;
   x: number;
@@ -131,7 +61,7 @@ export const CursorDot: React.FC = () => {
 
   const handleClick = (e: MouseEvent) => {
     const newDots: Dot[] = [];
-    const numDots = 6; // Number of dots to generate
+    const numDots = 10; // Number of dots to generate
 
     // Generate dots at the click position
     for (let i = 0; i < numDots; i++) {
@@ -155,9 +85,7 @@ export const CursorDot: React.FC = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDots((prevDots) =>
-        prevDots.filter((dot) => Date.now() - dot.startTime < dot.lifetime)
-      );
+      setDots((prevDots) => prevDots.filter((dot) => Date.now() - dot.startTime < dot.lifetime));
     }, 16); // 60 FPS update
 
     return () => clearInterval(interval);

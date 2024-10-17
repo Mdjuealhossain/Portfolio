@@ -8,20 +8,7 @@ import ChatRoundedIcon from "@mui/icons-material/ChatRounded";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 import MoreVertRoundedIcon from "@mui/icons-material/MoreVertRounded";
-import {
-  Box,
-  Stack,
-  Typography,
-  Menu,
-  IconButton,
-  Avatar,
-  TextField,
-  Button,
-  FormControl,
-  AppBar,
-  Toolbar,
-  Hidden,
-} from "@mui/material";
+import { Box, Stack, Typography, Menu, IconButton, Avatar, TextField, Button, FormControl, AppBar, Toolbar, Hidden } from "@mui/material";
 
 import { ChatMeProps } from "./Types";
 
@@ -86,13 +73,7 @@ const ChatMe: FC<ChatMeProps> = () => {
           right={{ md: "12%" }}
           zIndex={999}
         >
-          <Box
-            bgcolor="background.paper"
-            px={5}
-            py={1}
-            borderRadius={8}
-            boxShadow={24}
-          >
+          <Box bgcolor="background.paper" px={5} py={1} borderRadius={8} boxShadow={24}>
             <Typography variant="subtitle2">
               {"Chat Me"} {"👋"}
             </Typography>
@@ -169,14 +150,7 @@ const ChatMe: FC<ChatMeProps> = () => {
         }}
         open={Boolean(anchorElAvat)}
       >
-        <Stack
-          borderRadius={3}
-          p={1}
-          mt={{ xs: 4, md: 1 }}
-          m={1}
-          gap={1}
-          position="relative"
-        >
+        <Stack borderRadius={3} p={1} mt={{ xs: 4, md: 1 }} m={1} gap={1} position="relative">
           <Hidden mdUp>
             <Box position="relative">
               <IconButton
@@ -191,54 +165,27 @@ const ChatMe: FC<ChatMeProps> = () => {
                   p: 0,
                 })}
               >
-                <KeyboardArrowDownRoundedIcon
-                  sx={{ height: 32, width: 32 }}
-                  onClick={handleCloseNavAvatar}
-                />
+                <KeyboardArrowDownRoundedIcon sx={{ height: 32, width: 32 }} onClick={handleCloseNavAvatar} />
               </IconButton>
             </Box>
           </Hidden>
-          <Stack
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-          >
+          <Stack flexDirection="row" justifyContent="space-between" alignItems="center">
             <Typography variant="h6">
               {"Good to see you!"} {"👋"}
             </Typography>
-            <Stack
-              flexDirection="row"
-              justifyContent="center"
-              alignItems="center"
-            >
+            <Stack flexDirection="row" justifyContent="center" alignItems="center">
               <MoreVertRoundedIcon />
               <Hidden mdDown implementation="css">
-                <KeyboardArrowDownRoundedIcon
-                  sx={{ height: 40, width: 40 }}
-                  onClick={handleCloseNavAvatar}
-                />
+                <KeyboardArrowDownRoundedIcon sx={{ height: 40, width: 40 }} onClick={handleCloseNavAvatar} />
               </Hidden>
             </Stack>
           </Stack>
-          <Stack
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            gap={4}
-          >
+          <Stack flexDirection="row" justifyContent="space-between" alignItems="center" gap={4}>
             <Stack flexDirection="column">
-              <Typography
-                variant="caption"
-                fontWeight={300}
-                color="text.secondary"
-              >
+              <Typography variant="caption" fontWeight={300} color="text.secondary">
                 Explore my website.
               </Typography>
-              <Typography
-                variant="caption"
-                fontWeight={300}
-                color="text.secondary"
-              >
+              <Typography variant="caption" fontWeight={300} color="text.secondary">
                 Feel free to ask any questions. 🎉
               </Typography>
             </Stack>
@@ -250,10 +197,7 @@ const ChatMe: FC<ChatMeProps> = () => {
             </Typography>
           </Stack>
           <Box>
-            <Stack
-              bgcolor={(theme) => theme.palette.background.default}
-              borderRadius={2}
-            >
+            <Stack bgcolor={(theme) => theme.palette.background.default} borderRadius={2}>
               <Stack
                 gap={1}
                 px={1}
@@ -273,28 +217,9 @@ const ChatMe: FC<ChatMeProps> = () => {
               >
                 <Stack gap={1}>
                   {chatData.map((data) => (
-                    <Stack
-                      key={data.id}
-                      flexDirection="column-reverse"
-                      alignItems={`${data.name === "user" ? "end" : "start"}`}
-                    >
-                      <Box
-                        bgcolor={(theme) =>
-                          data.name === "author"
-                            ? theme.palette.grey[600]
-                            : "success.main"
-                        }
-                        borderRadius={1}
-                        px={1}
-                        py={0.5}
-                        maxWidth={232}
-                      >
-                        <Typography
-                          variant="caption"
-                          fontSize={{ xs: 8, md: 10 }}
-                          lineHeight="normal"
-                          fontWeight={300}
-                        >
+                    <Stack key={data.id} flexDirection="column-reverse" alignItems={`${data.name === "user" ? "end" : "start"}`}>
+                      <Box bgcolor={(theme) => (data.name === "author" ? theme.palette.grey[600] : "success.main")} borderRadius={1} px={1} py={0.5} maxWidth={232}>
+                        <Typography variant="caption" fontSize={{ xs: 8, md: 10 }} lineHeight="normal" fontWeight={300}>
                           {data.msg}
                         </Typography>
                       </Box>
@@ -303,10 +228,7 @@ const ChatMe: FC<ChatMeProps> = () => {
                 </Stack>
               </Stack>
               <Box pt={1}>
-                <FormControl
-                  fullWidth
-                  sx={{ border: 2, borderColor: "divider", borderRadius: 2 }}
-                >
+                <FormControl fullWidth sx={{ border: 2, borderColor: "divider", borderRadius: 2 }}>
                   <Box pl={1}>
                     <TextField
                       multiline
@@ -320,10 +242,7 @@ const ChatMe: FC<ChatMeProps> = () => {
                         setInputData(e.target.value);
                       }}
                       onKeyDown={(event) => {
-                        if (
-                          event.key === "Enter" &&
-                          (event.metaKey || event.ctrlKey)
-                        ) {
+                        if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) {
                           handleClick();
                         }
                       }}
@@ -356,19 +275,13 @@ const ChatMe: FC<ChatMeProps> = () => {
                         <FormatBoldRoundedIcon sx={{ height: 18, width: 18 }} />
                       </IconButton>
                       <IconButton size="small" disableRipple>
-                        <FormatItalicRoundedIcon
-                          sx={{ height: 18, width: 18 }}
-                        />
+                        <FormatItalicRoundedIcon sx={{ height: 18, width: 18 }} />
                       </IconButton>
                       <IconButton size="small" disableRipple>
-                        <StrikethroughSRoundedIcon
-                          sx={{ height: 18, width: 18 }}
-                        />
+                        <StrikethroughSRoundedIcon sx={{ height: 18, width: 18 }} />
                       </IconButton>
                       <IconButton size="small" disableRipple>
-                        <FormatListBulletedRoundedIcon
-                          sx={{ height: 18, width: 18 }}
-                        />
+                        <FormatListBulletedRoundedIcon sx={{ height: 18, width: 18 }} />
                       </IconButton>
                     </Box>
                     <Button
@@ -377,9 +290,7 @@ const ChatMe: FC<ChatMeProps> = () => {
                       color="success"
                       variant="contained"
                       sx={{ px: 1, fontSize: "0.625rem" }}
-                      endIcon={
-                        <SendRoundedIcon sx={{ height: 18, width: 18 }} />
-                      }
+                      endIcon={<SendRoundedIcon sx={{ height: 18, width: 18 }} />}
                       onClick={handleClick}
                     >
                       Send

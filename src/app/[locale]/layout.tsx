@@ -12,9 +12,7 @@ interface Props {
   params: { locale: string };
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
+export async function generateMetadata({ params: { locale } }: Omit<Props, "children">) {
   const t = await getTranslations({ locale });
   return {
     title: {
@@ -61,9 +59,7 @@ export default async function RootLayout({
       <ThemeContextProvider>
         <body suppressHydrationWarning={true}>
           <AppLayout>
-            <NextIntlClientProvider messages={messages}>
-              {children}
-            </NextIntlClientProvider>
+            <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
           </AppLayout>
         </body>
       </ThemeContextProvider>

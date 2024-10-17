@@ -1,24 +1,10 @@
 import React, { FC, useState } from "react";
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box, Card, CardContent, CardHeader, CardMedia, Stack, Typography } from "@mui/material";
 import { TestmonialProps } from "./Types";
 import Quote from "../../../public/Assesr/Svg/quote.svg";
 import Image from "next/image";
 
-const Testmonial: FC<TestmonialProps> = ({
-  title,
-  description,
-  subtitle,
-  image,
-}) => {
+const Testmonial: FC<TestmonialProps> = ({ title, description, subtitle, image }) => {
   const [showMore, setShomore] = useState(false);
   return (
     <Card

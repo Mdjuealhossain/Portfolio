@@ -22,12 +22,7 @@ const Portfolio = () => {
       <Stack py={5}>
         <Container maxWidth="lg">
           <Box mb={{ xs: 6, md: 10 }}>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              textAlign="center"
-              pb={2}
-            >
+            <Typography variant="body2" color="text.secondary" textAlign="center" pb={2}>
               Showcasing some of my best work
             </Typography>
             <Typography variant="h2" textAlign="center">
@@ -37,15 +32,7 @@ const Portfolio = () => {
           <Box sx={{ width: "100%", typography: "body1" }}>
             <TabContext value={value}>
               <Stack justifyContent="center" alignItems="center">
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  variant="scrollable"
-                  scrollButtons="auto"
-                  textColor="secondary"
-                  indicatorColor="secondary"
-                  aria-label="secondary tabs example"
-                >
+                <Tabs value={value} onChange={handleChange} variant="scrollable" scrollButtons="auto" textColor="secondary" indicatorColor="secondary" aria-label="secondary tabs example">
                   <Tab value="1" label={<Typography>All</Typography>} />
                   <Tab value="2" label={<Typography>Brand</Typography>} />
                   <Tab value="3" label={<Typography>Design</Typography>} />
@@ -53,12 +40,7 @@ const Portfolio = () => {
                 </Tabs>
               </Stack>
               <TabPanel value="1" sx={{ p: 0, pt: 3 }}>
-                <Grid
-                  container
-                  spacing={3}
-                  justifyContent="center"
-                  alignItems="center"
-                >
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                   {AllData.map((data) => {
                     return (
                       <Grid item xs={6} lg={4} key={data.id}>
@@ -69,12 +51,7 @@ const Portfolio = () => {
                 </Grid>
               </TabPanel>
               <TabPanel value="2" sx={{ p: 0, pt: 3 }}>
-                <Grid
-                  container
-                  spacing={3}
-                  justifyContent="center"
-                  alignItems="center"
-                >
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                   {brandData.map((data) => {
                     return (
                       <Grid item xs={6} lg={4} key={data.id}>
@@ -85,12 +62,7 @@ const Portfolio = () => {
                 </Grid>
               </TabPanel>
               <TabPanel value="3" sx={{ p: 0, pt: 3 }}>
-                <Grid
-                  container
-                  spacing={3}
-                  justifyContent="center"
-                  alignItems="center"
-                >
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                   {designData.map((data) => {
                     return (
                       <Grid item xs={6} lg={4} key={data.id}>
@@ -101,12 +73,7 @@ const Portfolio = () => {
                 </Grid>
               </TabPanel>
               <TabPanel value="4" sx={{ p: 0, pt: 3 }}>
-                <Grid
-                  container
-                  spacing={3}
-                  justifyContent="center"
-                  alignItems="center"
-                >
+                <Grid container spacing={3} justifyContent="center" alignItems="center">
                   {photsData.map((data) => {
                     return (
                       <Grid item xs={6} lg={4} key={data.id}>

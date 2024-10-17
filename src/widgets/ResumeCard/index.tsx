@@ -4,12 +4,7 @@ import { Box, Button, Card, Paper, Stack, Typography } from "@mui/material";
 
 import { ResumeCardProps } from "./Types";
 
-const ResumeCard: FC<ResumeCardProps> = ({
-  passyr,
-  depertment,
-  school,
-  description,
-}) => {
+const ResumeCard: FC<ResumeCardProps> = ({ passyr, depertment, school, description }) => {
   return (
     <Card
       elevation={2}

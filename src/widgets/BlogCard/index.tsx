@@ -1,12 +1,5 @@
 import { FC } from "react";
-import {
-  Card,
-  CardContent,
-  Typography,
-  CardMedia,
-  Box,
-  Stack,
-} from "@mui/material";
+import { Card, CardContent, Typography, CardMedia, Box, Stack } from "@mui/material";
 
 import { BlogCardProps } from "./type";
 import { Theme } from "@mui/material/styles";
@@ -16,14 +9,7 @@ const BlogCard: FC<BlogCardProps> = ({ title, des, img, alt }) => {
     <Card sx={{ bgcolor: "transparent" }} elevation={0}>
       <Box position="relative">
         <CardMedia height={230} component="img" image={img} alt={alt} />
-        <Box
-          position="absolute"
-          left={0}
-          bottom={0}
-          bgcolor={(theme) => theme.palette.success.main}
-          px={1.75}
-          py={0.25}
-        >
+        <Box position="absolute" left={0} bottom={0} bgcolor={(theme) => theme.palette.success.main} px={1.75} py={0.25}>
           <Typography>11 Dec 20</Typography>
         </Box>
       </Box>

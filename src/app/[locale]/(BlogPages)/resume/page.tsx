@@ -12,14 +12,7 @@ const Resume = () => {
       <Box py={5}>
         <Container>
           <Grid container rowSpacing={{ xs: 6, lg: 10 }} columnSpacing={3}>
-            <Grid
-              item
-              xs={12}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="column"
-            >
+            <Grid item xs={12} display="flex" justifyContent="center" alignItems="center" flexDirection="column">
               <Typography variant="body2" color="text.secondary" pb={2}>
                 Check out my Resume
               </Typography>

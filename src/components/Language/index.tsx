@@ -1,22 +1,9 @@
 import { FC } from "react";
-import {
-  Box,
-  List,
-  ListItemButton,
-  Stack,
-  Typography,
-  alpha,
-} from "@mui/material";
+import { Box, List, ListItemButton, Stack, Typography, alpha } from "@mui/material";
 
 import { LanguageProps } from "./Types";
 
-const Language: FC<LanguageProps> = ({
-  name,
-  langKey,
-  eng,
-  isActive = false,
-  onClick,
-}) => {
+const Language: FC<LanguageProps> = ({ name, langKey, eng, isActive = false, onClick }) => {
   return (
     <Box
       sx={{
@@ -34,16 +21,10 @@ const Language: FC<LanguageProps> = ({
             border: 0.2,
             borderColor: isActive ? theme.palette.action.focus : "transparent",
             px: 1,
-            bgcolor: alpha(
-              theme.palette.primary.light,
-              theme.palette.action.selectedOpacity
-            ),
+            bgcolor: alpha(theme.palette.primary.light, theme.palette.action.selectedOpacity),
 
             ":hover": {
-              bgcolor: alpha(
-                theme.palette.primary.dark,
-                theme.palette.action.focusOpacity
-              ),
+              bgcolor: alpha(theme.palette.primary.dark, theme.palette.action.focusOpacity),
             },
           })}
           onClick={onClick && onClick}
