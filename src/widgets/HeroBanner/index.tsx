@@ -94,7 +94,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
         </Box>
 
         <Stack position="absolute" top="68%" left={0} right={0}>
-          <Marquee speed={50} pauseOnHover={true} autoFill>
+          <Marquee speed={50} pauseOnClick autoFill>
             <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
               <Box
                 component="img"

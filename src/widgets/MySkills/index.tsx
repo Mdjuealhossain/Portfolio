@@ -1,12 +1,11 @@
 "use client";
 import { FC } from "react";
 import { styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import { Grid, Stack, Typography } from "@mui/material";
 import LinearProgress, { linearProgressClasses } from "@mui/material/LinearProgress";
 
-import { MySkillsProps } from "./Types";
 import Objerb from "@/components/Objerb";
+import { MySkillsProps } from "./Types";
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 10,

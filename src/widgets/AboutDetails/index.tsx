@@ -60,9 +60,11 @@ const AboutDetails: FC<AboutDetailsProps> = () => {
         </Grid>
       </Grid>
       <Stack gap={3} flexDirection={{ xs: "column-reverse", md: "row" }} alignItems="center">
-        <Button variant="contained" color="success" sx={{ borderRadius: 30 }}>
-          Download CV
-        </Button>
+        <a href="/document/jueal(Developer)...pdf (1) (1).pdf" download="Md. Jueal.pdf">
+          <Button variant="contained" color="success" sx={{ borderRadius: 30 }}>
+            Download CV
+          </Button>
+        </a>
         <Hidden mdDown>
           <Box maxWidth={60} width="100%">
             <Divider />

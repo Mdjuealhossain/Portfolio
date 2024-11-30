@@ -19,18 +19,13 @@ const Tour: FC<TourProps> = () => {
           </Typography>
           <Typography color="text.secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium qui aspernatur unde mollitia, in laborum.</Typography>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          component="video"
-          controls
-          sx={{
-            width: "100%",
-            height: "auto",
-          }}
-        >
-          <source src="/public/static/video/videoplayback (1).mp4" type="video/mp4" />
+        <Grid item xs={12} md={6}>
+          <Box
+            component="video"
+            src="/assets/video/Dubai, United Arab Emirates 🇦🇪 - by drone [4K].mp4" // Replace with your video URL
+            controls
+            sx={{ height: 320 }}
+          />
         </Grid>
       </Grid>
     </Objerb>
