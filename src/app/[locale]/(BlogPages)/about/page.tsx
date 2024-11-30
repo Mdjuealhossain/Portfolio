@@ -18,34 +18,24 @@ const About = () => {
             </Typography>
             <Typography variant="h2">About Me</Typography>
           </Grid>
-
-          <Grid container item xs={12}>
-            <Grid item xs={12} md={6}>
-              <Hidden mdDown implementation="css">
-                <Image src={"/static/images/IMG_20240221_154711.jpg"} alt="about" height={517} width={430} />
-              </Hidden>
-              <Hidden mdUp implementation="css">
-                <Stack justifyContent="center" alignItems="center" pb={4}>
-                  <Avatar
-                    src="https://cdn5.f-cdn.com/ppic/244026572/logo/74430235/yISKG/CROPPED_profile_logo_VGFCW_16ada05214aa9a815c6159c4ab557994.jpeg?image-optimizer=force&format=webply&width=336"
-                    alt="img"
-                    sx={{ width: 176, height: 176 }}
-                  />
-                </Stack>
-              </Hidden>
+          <Grid container item xs={12} spacing={4}>
+            <Grid item xs={12} md={6} display="flex" justifyContent="center" alignItems="center">
+              <Image src={"/assets/images/about/file.webp"} alt="about" layout="responsive" height={417} width={570} />
             </Grid>
             <Grid item xs={12} md={6}>
               <AboutDetails />
             </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <MyService />
           </Grid>
         </Grid>
       </Container>
       <Box mt={{ xs: 6, lg: 10 }}>
         <MyTestmonials />
       </Box>
+      <Container maxWidth="lg">
+        <Box mt={{ xs: 6, lg: 10 }}>
+          <MyService />
+        </Box>
+      </Container>
     </Box>
   );
 };
