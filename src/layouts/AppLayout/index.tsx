@@ -22,6 +22,7 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
           position="fixed"
           right="0%"
           top="50%"
+          zIndex={999}
           // sx={{ transform: "translate(-50%, -50%)" }}
         >
           <ColorMode />
@@ -41,8 +42,7 @@ export default AppLayout;
 const ColorMode = () => {
   const { toggleColorMode } = useContext(ColorModeContext);
   const theme = useTheme();
-  const mode =
-    theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
+  const mode = theme.palette.mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />;
   return (
     <Box
       sx={(theme) => ({

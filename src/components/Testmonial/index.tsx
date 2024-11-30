@@ -11,12 +11,8 @@ const Testmonial: FC<TestmonialProps> = ({ title, description, subtitle, image }
       sx={(theme) => ({
         py: { xs: 3, md: 5 },
         px: { xs: 4, md: 6 },
+        maxWidth: "500px",
         boxShadow: theme.shadows[13],
-        ":hover": {
-          transform: "translateY(-15px)",
-          boxShadow: theme.shadows[24],
-          transition: "all .7s",
-        },
       })}
     >
       <CardHeader

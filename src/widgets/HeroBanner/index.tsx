@@ -1,10 +1,9 @@
 "use client";
 import { FC, useState, useEffect } from "react";
-import { Box, Stack, Typography, Hidden, CardMedia } from "@mui/material";
+import Marquee from "react-fast-marquee";
+import { Box, Stack, Typography, Hidden, CardMedia, Button } from "@mui/material";
 
-import Paralux from "@/widgets/Paralux";
 import { imges } from "@/data";
-
 import { HeroBannerProps } from "./Types";
 
 const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
@@ -89,8 +88,283 @@ const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
           </Typography>
         </Hidden>
         <Box sx={animate ? slideInRightStyles : {}}>
-          <Typography variant="h4">{content}</Typography>
+          <Typography variant="h4" textAlign="center">
+            {content}
+          </Typography>
         </Box>
+
+        <Stack position="absolute" top="68%" left={0} right={0}>
+          <Marquee speed={50} pauseOnHover={true} autoFill>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/html.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/css.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/js.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/ts.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/react.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/next.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  bgcolor: "common.white",
+                  borderRadius: "100%",
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/redux.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/rs.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/farmer.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/tailwind.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/mui.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/bootstrap.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/figma.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/xd.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/canva.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+            <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
+              <Box
+                component="img"
+                src="/assets/icons/skills/sb.svg"
+                alt="figma"
+                height={{ xs: 35, md: 50 }}
+                width={{ xs: 35, md: 50 }}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.2s ease-in-out",
+                  "&:hover": {
+                    filter: "grayscale(0%)",
+                  },
+                }}
+              />
+            </Box>
+          </Marquee>
+          <Stack justifyContent="center" alignItems="center" mt={6}>
+            <a href="/document/jueal(Developer)...pdf (1) (1).pdf" download="Md. Jueal.pdf">
+              <Button
+                variant="contained"
+                sx={(theme) => ({ borderRadius: 30, background: `linear-gradient(-45deg, ${theme.palette.success.main}, ${theme.palette.secondary.dark},${theme.palette.success.main})` })}
+              >
+                Download CV
+              </Button>
+            </a>
+          </Stack>
+        </Stack>
       </Stack>
     </CardMedia>
   );

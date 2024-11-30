@@ -101,7 +101,5 @@ export const photsData = [
   },
 ];
 
-const developer = "/static/images/developer.jpg";
-const designer = "/static/images/designer.jpg";
-const freelancer = "/static/images/freelancer.jpg";
-export const imges = [developer, designer, freelancer];
+// herro banner bg image
+export const imges = ["/assets/images/banner/developer.jpg", "/assets/images/banner/designer.jpg", "/assets/images/banner/freelancer.jpg"];
