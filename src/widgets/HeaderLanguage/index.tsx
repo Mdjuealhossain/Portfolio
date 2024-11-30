@@ -78,9 +78,9 @@ const HeaderLanguage: FC<HeaderLanguageProps> = () => {
         gap={0.5}
         justifyContent="center"
         alignItems="center"
-        px={{ md: 2 }}
-        py={{ md: 0.5 }}
-        ml={5}
+        px={2}
+        py={0.5}
+        ml={{ xs: 2, md: 5 }}
         borderRadius={40}
         boxShadow={24}
         sx={(theme) => ({
