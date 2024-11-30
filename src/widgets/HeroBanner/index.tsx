@@ -93,7 +93,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
           </Typography>
         </Box>
 
-        <Stack position={{ md: "absolute" }} mt={{ xs: 4 }} top="68%" left={0} right={0}>
+        <Stack position="absolute" top="68%" left={0} right={0}>
           <Marquee speed={50} pauseOnHover={true} autoFill>
             <Box mx={{ xs: 1.5, md: 2.5 }} boxShadow={23}>
               <Box
@@ -354,7 +354,7 @@ const HeroBanner: FC<HeroBannerProps> = ({ name, dev, free, des }) => {
               />
             </Box>
           </Marquee>
-          <Stack justifyContent="center" alignItems="center" mt={{ xs: 2.5, md: 6 }}>
+          <Stack justifyContent="center" alignItems="center" mt={{ xs: 2.4, md: 6 }}>
             <a href="/document/jueal(Developer)...pdf (1) (1).pdf" download="Md. Jueal.pdf">
               <Button
                 variant="contained"
