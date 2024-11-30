@@ -24,7 +24,7 @@ const Tour: FC<TourProps> = () => {
             component="video"
             src="/assets/video/Dubai, United Arab Emirates 🇦🇪 - by drone [4K].mp4" // Replace with your video URL
             controls
-            sx={{ height: 320 }}
+            sx={{ height: { xs: "220", md: 320 }, width: "100%" }}
           />
         </Grid>
       </Grid>
