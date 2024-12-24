@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Link, Stack, Typography } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import TabPanel from "@mui/lab/TabPanel";
@@ -41,7 +41,7 @@ const Portfolio = () => {
               <Grid container spacing={3} justifyContent="center" alignItems="center">
                 {AllData.map((data) => {
                   return (
-                    <Grid item xs={6} lg={4} key={data.id}>
+                    <Grid component={Link} href={`${data.url}`} target="blank" item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
@@ -52,7 +52,7 @@ const Portfolio = () => {
               <Grid container spacing={3} justifyContent="center" alignItems="center">
                 {brandData.map((data) => {
                   return (
-                    <Grid item xs={6} lg={4} key={data.id}>
+                    <Grid component={Link} href={`${data.url}`} target="blank" item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
@@ -63,7 +63,7 @@ const Portfolio = () => {
               <Grid container spacing={3} justifyContent="center" alignItems="center">
                 {designData.map((data) => {
                   return (
-                    <Grid item xs={6} lg={4} key={data.id}>
+                    <Grid component={Link} href={`${data.url}`} target="blank" item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
@@ -74,7 +74,7 @@ const Portfolio = () => {
               <Grid container spacing={3} justifyContent="center" alignItems="center">
                 {photsData.map((data) => {
                   return (
-                    <Grid item xs={6} lg={4} key={data.id}>
+                    <Grid component={Link} href={`${data.url}`} target="blank" item xs={6} lg={4} key={data.id}>
                       <ImageCard img={data.img} title={data.title} />
                     </Grid>
                   );
