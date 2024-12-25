@@ -15,6 +15,11 @@
 
 # production
 /build
+# Ignore VSCode settings folder
+.vscode/
+
+# Ignore Prettier config file
+.prettierrc
 
 # misc
 .DS_Store
